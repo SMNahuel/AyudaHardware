@@ -1,14 +1,15 @@
 const express = require("express");
+const cors = require('cors');
 const logger = require('morgan');
 const cookieParser = require('cookie-parser');
-const path = require('path');
-const app = express();
 const { Sequelize } = require('./models')
-const config = require('./config/config')
-
+const path = require('path');
 const publicDirectory = path.join(__dirname, './public');
-app.use(express.static(publicDirectory));
 
+const app = express();
+
+app.use(express.static(publicDirectory));
+app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -30,7 +31,9 @@ sequelize.authenticate().then(function(){
 //defino las rutas
 app.use('/', require('./routes/paginas'));
 app.use('/auth', require('./routes/auth'));
-
+app.use('/cpu/', require('./routes/getComponent'));
+app.use('/gpu/', require('./routes/getComponent'));
+app.use('/perfomance', require('./routes/perfomance'));
 
 app.listen(5000, () => {
     console.log("Servidor iniciado en el puerto 5000")

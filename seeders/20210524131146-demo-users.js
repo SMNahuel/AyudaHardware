@@ -6,7 +6,7 @@ module.exports = {
       name: 'Gustavo',      
       email: 'Gustavo@test.com',
       // Important: Password not encrypted yet! 
-      password: '$2b$10$CO4FJCSv3mdDleo0m41vaeXG5AZOcyVx2QiSmsTZdi/IQZWB.lG06',
+      password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
       updatedAt: new Date
   },
@@ -14,7 +14,7 @@ module.exports = {
       name: 'Jack',      
       email: 'Jack@test.com',
       // Important: Password not encrypted yet! 
-      password: '$2b$10$CO4FJCSv3mdDleo0m41vaeXG5AZOcyVx2QiSmsTZdi/IQZWB.lG06',
+      password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
       updatedAt: new Date
   },
@@ -22,7 +22,7 @@ module.exports = {
       name: 'Peter',      
       email: 'Peter@test.com',
       // Important: Password not encrypted yet! 
-      password: '$2b$10$CO4FJCSv3mdDleo0m41vaeXG5AZOcyVx2QiSmsTZdi/IQZWB.lG06',
+      password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
       updatedAt: new Date
   },
@@ -30,7 +30,7 @@ module.exports = {
       name: 'Fabricio',      
       email: 'Fabricio@test.com',
       // Important: Password not encrypted yet! 
-      password: '$2b$10$CO4FJCSv3mdDleo0m41vaeXG5AZOcyVx2QiSmsTZdi/IQZWB.lG06',
+      password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
       updatedAt: new Date
   },
@@ -38,7 +38,7 @@ module.exports = {
       name: 'Victoria',      
       email: 'Victoria@test.com',
       // Important: Password not encrypted yet! 
-      password: '$2b$10$CO4FJCSv3mdDleo0m41vaeXG5AZOcyVx2QiSmsTZdi/IQZWB.lG06',
+      password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
       updatedAt: new Date
   },
@@ -46,7 +46,7 @@ module.exports = {
       name: 'Celeste',      
       email: 'Celeste@test.com',
       // Important: Password not encrypted yet! 
-      password: '$2b$10$CO4FJCSv3mdDleo0m41vaeXG5AZOcyVx2QiSmsTZdi/IQZWB.lG06',
+      password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
       updatedAt: new Date
   },
@@ -54,7 +54,7 @@ module.exports = {
       name: 'Rick',      
       email: 'Rick@test.com',
       // Important: Password not encrypted yet! 
-      password: '$2b$10$CO4FJCSv3mdDleo0m41vaeXG5AZOcyVx2QiSmsTZdi/IQZWB.lG06',
+      password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
       updatedAt: new Date
   },
@@ -62,7 +62,7 @@ module.exports = {
       name: 'Sergio',      
       email: 'Sergio@test.com',
       // Important: Password not encrypted yet! 
-      password: '$2b$10$CO4FJCSv3mdDleo0m41vaeXG5AZOcyVx2QiSmsTZdi/IQZWB.lG06',
+      password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
       updatedAt: new Date
   },
@@ -70,7 +70,7 @@ module.exports = {
       name: 'Esteban',      
       email: 'Esteban@test.com',
       // Important: Password not encrypted yet! 
-      password: '$2b$10$CO4FJCSv3mdDleo0m41vaeXG5AZOcyVx2QiSmsTZdi/IQZWB.lG06',
+      password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
       updatedAt: new Date
   },
@@ -78,7 +78,7 @@ module.exports = {
       name: 'David',      
       email: 'David@test.com',
       // Important: Password not encrypted yet! 
-      password: '$2b$10$CO4FJCSv3mdDleo0m41vaeXG5AZOcyVx2QiSmsTZdi/IQZWB.lG06',
+      password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
       updatedAt: new Date
   },
@@ -87,7 +87,7 @@ module.exports = {
       name: 'Victor',      
       email: 'Victor@test.com',
       // Important: Password not encrypted yet! 
-      password: '$2b$10$CO4FJCSv3mdDleo0m41vaeXG5AZOcyVx2QiSmsTZdi/IQZWB.lG06',
+      password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
       updatedAt: new Date
   },
@@ -95,7 +95,7 @@ module.exports = {
       name: 'Luis',      
       email: 'Luis@test.com',
       // Important: Password not encrypted yet! 
-      password: '$2b$10$CO4FJCSv3mdDleo0m41vaeXG5AZOcyVx2QiSmsTZdi/IQZWB.lG06',
+      password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
       updatedAt: new Date
   },
@@ -103,7 +103,7 @@ module.exports = {
       name: 'Homer',      
       email: 'Homer@test.com',
       // Important: Password not encrypted yet! 
-      password: '$2b$10$CO4FJCSv3mdDleo0m41vaeXG5AZOcyVx2QiSmsTZdi/IQZWB.lG06',
+      password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
       updatedAt: new Date
   },
@@ -111,7 +111,7 @@ module.exports = {
       name: 'Ignacion',      
       email: 'Ignacion@test.com',
       // Important: Password not encrypted yet! 
-      password: '$2b$10$CO4FJCSv3mdDleo0m41vaeXG5AZOcyVx2QiSmsTZdi/IQZWB.lG06',
+      password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
       updatedAt: new Date
   },
@@ -119,7 +119,7 @@ module.exports = {
       name: 'Antonela',      
       email: 'Antonela@test.com',
       // Important: Password not encrypted yet! 
-      password: '$2b$10$CO4FJCSv3mdDleo0m41vaeXG5AZOcyVx2QiSmsTZdi/IQZWB.lG06',
+      password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
       updatedAt: new Date
   },
@@ -127,7 +127,7 @@ module.exports = {
       name: 'Virginia',      
       email: 'Virginia@test.com',
       // Important: Password not encrypted yet! 
-      password: '$2b$10$CO4FJCSv3mdDleo0m41vaeXG5AZOcyVx2QiSmsTZdi/IQZWB.lG06',
+      password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
       updatedAt: new Date
   },
@@ -135,7 +135,7 @@ module.exports = {
       name: 'Selene',      
       email: 'Selene@test.com',
       // Important: Password not encrypted yet! 
-      password: '$2b$10$CO4FJCSv3mdDleo0m41vaeXG5AZOcyVx2QiSmsTZdi/IQZWB.lG06',
+      password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
       updatedAt: new Date
   },
@@ -143,7 +143,7 @@ module.exports = {
       name: 'Clarisa',      
       email: 'Clarisa@test.com',
       // Important: Password not encrypted yet! 
-      password: '$2b$10$CO4FJCSv3mdDleo0m41vaeXG5AZOcyVx2QiSmsTZdi/IQZWB.lG06',
+      password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
       updatedAt: new Date
   },
@@ -151,7 +151,7 @@ module.exports = {
       name: 'Genaro',      
       email: 'Genaro@test.com',
       // Important: Password not encrypted yet! 
-      password: '$2b$10$CO4FJCSv3mdDleo0m41vaeXG5AZOcyVx2QiSmsTZdi/IQZWB.lG06',
+      password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
       updatedAt: new Date
   },
@@ -159,7 +159,7 @@ module.exports = {
       name: 'Hector',      
       email: 'Hector@test.com',
       // Important: Password not encrypted yet! 
-      password: '$2b$10$CO4FJCSv3mdDleo0m41vaeXG5AZOcyVx2QiSmsTZdi/IQZWB.lG06',
+      password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
       updatedAt: new Date
   }
