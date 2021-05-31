@@ -22,6 +22,7 @@ const sequelize = new Sequelize('test', 'root', '', {
     dialect : 'mysql',
     operatorsAliases: false
 });
+
 sequelize.authenticate().then(function(){
     console.log("Connect");
   }).catch(function(error){
@@ -34,26 +35,13 @@ app.use('/auth', require('./routes/auth'));
 app.use('/cpu/', require('./routes/getComponent'));
 app.use('/gpu/', require('./routes/getComponent'));
 app.use('/perfomance', require('./routes/perfomance'));
+//Cookise session
+/* app.use(cookieSession({
+    name: 'session',
+    keys: ['user', 'session']
+})) */
 
 app.listen(5000, () => {
     console.log("Servidor iniciado en el puerto 5000")
 });
 
-
-/* const mysql = require("mysql"); */
-/* 
-dotenv.config({ path: './.env' });
-
-const db = mysql.createConnection({
-    host: process.env.DATABASE_HOST,
-    user: process.env.DATABASE_USER,
-    password: process.env.DATABASE_PASSWORD,
-    database: process.env.DATABASE
-}); */
-/* db.connect((error) => {
-        if (error) {
-            console.log(error)
-        } else {
-            console.log("MySQL Conectada...")
-        }
-}) */

@@ -5,6 +5,7 @@ module.exports = {
     await queryInterface.bulkInsert('users', [    {
       name: 'Gustavo',      
       email: 'Gustavo@test.com',
+      roleId: 1,
       // Important: Password not encrypted yet! 
       password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
@@ -13,6 +14,7 @@ module.exports = {
   {
       name: 'Jack',      
       email: 'Jack@test.com',
+      roleId: 1,
       // Important: Password not encrypted yet! 
       password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
@@ -21,6 +23,7 @@ module.exports = {
   {
       name: 'Peter',      
       email: 'Peter@test.com',
+      roleId: 1,
       // Important: Password not encrypted yet! 
       password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
@@ -29,6 +32,7 @@ module.exports = {
   {
       name: 'Fabricio',      
       email: 'Fabricio@test.com',
+      roleId: 1,
       // Important: Password not encrypted yet! 
       password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
@@ -37,6 +41,7 @@ module.exports = {
   {
       name: 'Victoria',      
       email: 'Victoria@test.com',
+      roleId: 1,
       // Important: Password not encrypted yet! 
       password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
@@ -45,6 +50,7 @@ module.exports = {
   {
       name: 'Celeste',      
       email: 'Celeste@test.com',
+      roleId: 1,
       // Important: Password not encrypted yet! 
       password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
@@ -53,6 +59,7 @@ module.exports = {
   {
       name: 'Rick',      
       email: 'Rick@test.com',
+      roleId: 1,
       // Important: Password not encrypted yet! 
       password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
@@ -61,6 +68,7 @@ module.exports = {
   {
       name: 'Sergio',      
       email: 'Sergio@test.com',
+      roleId: 1,
       // Important: Password not encrypted yet! 
       password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
@@ -69,6 +77,7 @@ module.exports = {
   {
       name: 'Esteban',      
       email: 'Esteban@test.com',
+      roleId: 1,
       // Important: Password not encrypted yet! 
       password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
@@ -77,6 +86,7 @@ module.exports = {
   {
       name: 'David',      
       email: 'David@test.com',
+      roleId: 1,
       // Important: Password not encrypted yet! 
       password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
@@ -86,6 +96,7 @@ module.exports = {
   {
       name: 'Victor',      
       email: 'Victor@test.com',
+      roleId: 2,
       // Important: Password not encrypted yet! 
       password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
@@ -94,6 +105,7 @@ module.exports = {
   {
       name: 'Luis',      
       email: 'Luis@test.com',
+      roleId: 2,
       // Important: Password not encrypted yet! 
       password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
@@ -102,6 +114,7 @@ module.exports = {
   {
       name: 'Homer',      
       email: 'Homer@test.com',
+      roleId: 2,
       // Important: Password not encrypted yet! 
       password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
@@ -110,6 +123,7 @@ module.exports = {
   {
       name: 'Ignacion',      
       email: 'Ignacion@test.com',
+      roleId: 2,
       // Important: Password not encrypted yet! 
       password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
@@ -118,6 +132,7 @@ module.exports = {
   {
       name: 'Antonela',      
       email: 'Antonela@test.com',
+      roleId: 2,
       // Important: Password not encrypted yet! 
       password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
@@ -126,6 +141,7 @@ module.exports = {
   {
       name: 'Virginia',      
       email: 'Virginia@test.com',
+      roleId: 2,
       // Important: Password not encrypted yet! 
       password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
@@ -134,6 +150,7 @@ module.exports = {
   {
       name: 'Selene',      
       email: 'Selene@test.com',
+      roleId: 2,
       // Important: Password not encrypted yet! 
       password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
@@ -142,6 +159,7 @@ module.exports = {
   {
       name: 'Clarisa',      
       email: 'Clarisa@test.com',
+      roleId: 2,
       // Important: Password not encrypted yet! 
       password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
@@ -150,6 +168,7 @@ module.exports = {
   {
       name: 'Genaro',      
       email: 'Genaro@test.com',
+      roleId: 2,
       // Important: Password not encrypted yet! 
       password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
@@ -158,6 +177,7 @@ module.exports = {
   {
       name: 'Hector',      
       email: 'Hector@test.com',
+      roleId: 2,
       // Important: Password not encrypted yet! 
       password: '$2b$08$KNppurj7de2cQcsdaLdd8ulNWEDJQ0IQWhUNgNYRRv6RgjVChqX/e',
       createdAt: new Date,
