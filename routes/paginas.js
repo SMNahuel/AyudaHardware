@@ -24,11 +24,18 @@ router.get('/blog', (req, res) => {
 });
 router.get('/buscar_hardware', (req, res) => {
     res.render('buscar_hardware');
-})
+
+});
 router.get('/guias_armado', (req, res) => {
     res.render('guias_armado');
-})
+
+});
+router.get('/sobre_nosotros', (req, res) => {
+    res.render('sobre_nosotros');
+
+});
 router.get('/pc_armadas', (req, res) => {
     res.render('pc_armadas');
-})
+
+});
 module.exports = router;
