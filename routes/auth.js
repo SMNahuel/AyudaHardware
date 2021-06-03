@@ -2,13 +2,23 @@ const cookieSession = require('cookie-session')
 const express = require('express');
 const bcrypt = require("bcrypt");
 const router = express.Router();
-const { getUserByEmail} = require('../controllers/auth.js');
+const user = require('../controllers/user');
+const { getUserByEmail } = require('../controllers/auth.js');
 const { body ,validationResult } = require('express-validator');
 
-router.post('/register', body('email').isEmail, (req,res) =>{
-    const errors = validationResult(req);
-});
-
+router.post('/register', body('email').isEmail(), body('password').isLength({ min: 6 }), function (req, res) {
+  const errors = validationResult(req);
+  validate(errors)
+  /* Encrypt password for send to BD */
+  /* we are driver like a promise, in the finish the encrypt call to create and change the pass for the passhash*/
+  hashPassword(req.body.password)
+    .then(r => user.create(req.body, req.body.password = r, res))
+    .then(r => {
+      // after successfull registration, a JWT token gets generated to authenticate user
+      res.status(200).send(r);
+    })
+    .catch(err => console.log(err))
+})
 router.post(
     '/login', 
     body('email').isEmail().normalizeEmail(), 
@@ -44,6 +54,21 @@ async function loginUser(email, password) {
     }
 };
   
+async function hashPassword(password) {
+  const passwordHash = await bcrypt.hash(password, 10);
+  return passwordHash
+}
 
+function validate(errors) {
+  if (!errors.isEmpty()) {
+    if (errors.errors.param == 'email') {
+      return res.status(400).send('Email invalido');
+    }
+    if (errors.errors.param === 'password') {
+      return res.status(400).send('Password invalido');
+    }
+    return res.status(400).json({ errors: errors.array() });
+  }
+}
   
 module.exports = router;

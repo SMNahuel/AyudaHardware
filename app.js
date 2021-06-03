@@ -31,6 +31,7 @@ sequelize.authenticate().then(function(){
 
 //defino las rutas
 app.use('/', require('./routes/paginas'));
+app.use('/user', require('./routes/user'));
 app.use('/auth', require('./routes/auth'));
 app.use('/cpu/', require('./routes/getComponent'));
 app.use('/gpu/', require('./routes/getComponent'));

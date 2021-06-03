@@ -9,7 +9,6 @@ module.exports = {
         return User.findAll();
     },
     create: function({email, password, name}){
-        console.log(email, password, name)
         return User
         .create({
             name: name,
