@@ -33,5 +33,15 @@ module.exports = {
             roleId: 2
         })
         .then(res => res)
-    }
+    },
+
+    updateChanges: function(userId, changes){
+        return User
+        .update(
+            changes, 
+            { where: { id: userId } }
+        )
+        .then(() => this.getUserById(userId))
+    },
+
 };

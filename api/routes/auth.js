@@ -1,4 +1,3 @@
-const cookieSession = require('cookie-session')
 const express = require('express');
 const bcrypt = require("bcrypt");
 const router = express.Router();
@@ -32,10 +31,15 @@ router.post(
         const result = await loginUser(email, password);
         if (!result) {
             return res.status(409).json({ error: 'Incorrect username or password' });
+        }else{
+          req.session.userId = user.id
         }
+        
         return res.status(200).send(email)
 });
-
+router.delete('/logout', async(req, res) =>{
+  req.session = null
+})
 async function loginUser(email, password) {
     try {
       const result = await getUserByEmail(email);

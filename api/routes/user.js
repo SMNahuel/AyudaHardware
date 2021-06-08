@@ -30,4 +30,9 @@ router.delete('/:id', async (req, res) => {
 
 });
 
+router.put('/update', async(req,res,next)=>{
+    user.updateChanges(req.body.id, req.body)
+    .then(r => res.send(r))
+    .catch(next)
+})
 module.exports = router;

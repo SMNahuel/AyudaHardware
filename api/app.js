@@ -1,12 +1,22 @@
-const express = require("express");
-const cors = require('cors');
-const logger = require('morgan');
 const cookieParser = require('cookie-parser');
-const { Sequelize } = require('./models')
+const session = require('express-session');
+const express = require("express");
+const logger = require('morgan');
+const cors = require('cors');
 const path = require('path');
-const publicDirectory = path.join(__dirname, './public');
+const findUserMiddleware = require('./middlewares/findUser');
 
+const { Sequelize } = require('./models')
+const publicDirectory = path.join(__dirname, './public');
 const app = express();
+
+app.use(session({
+    secret: ['1v89cfdg84re89v2189sd', 'm$%#$g2dsf96&/ujy%296rt&2'],
+    saveUninitialized: false,
+    resave: false
+}))
+
+app.use(findUserMiddleware)
 
 app.use(express.static(publicDirectory));
 app.use(cors());
@@ -20,7 +30,7 @@ app.set('view engine', 'hbs');
 const sequelize = new Sequelize('test', 'root', '', {
     host: "127.0.0.1",
     dialect : 'mysql',
-    operatorsAliases: false
+    operatorsAliases: 0
 });
 
 sequelize.authenticate().then(function(){
@@ -33,14 +43,10 @@ sequelize.authenticate().then(function(){
 app.use('/', require('./routes/paginas'));
 app.use('/user', require('./routes/user'));
 app.use('/auth', require('./routes/auth'));
+app.use('/post', require('./routes/post'));
 app.use('/cpu/', require('./routes/getComponent'));
 app.use('/gpu/', require('./routes/getComponent'));
 app.use('/perfomance', require('./routes/perfomance'));
-//Cookise session
-/* app.use(cookieSession({
-    name: 'session',
-    keys: ['user', 'session']
-})) */
 
 app.listen(5000, () => {
     console.log("Servidor iniciado en el puerto 5000")
