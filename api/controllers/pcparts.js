@@ -1,5 +1,5 @@
 const amdCpu = require('../parts/amd_cpu_database.json');
-const intelCpu = require('../parts/amd_cpu_database.json');
+const intelCpu = require('../parts/intel_cpu_database.json');
 const gpu = require('../parts/gpu_database.json');
 
 exports.getCpu = (req, res)  => {

@@ -3,7 +3,7 @@
         {
             "Name": "Athlon 3000G",
             "Codename": "Zen",
-            "Cores": "2-Apr",
+            "Cores": "2",
             "Clock": "3.5 GHz",
             "Socket": "Socket AM4",
             "Process": "14 nm",
@@ -58,7 +58,7 @@
         {
             "Name": "Athlon Silver 3050GE",
             "Codename": "Dali",
-            "Cores": "2-Apr",
+            "Cores": "2",
             "Clock": "3.4 GHz",
             "Socket": "Socket AM4",
             "Process": "12 nm",
@@ -69,7 +69,7 @@
         {
             "Name": "Athlon Silver PRO 3125GE",
             "Codename": "Dali",
-            "Cores": "2-Apr",
+            "Cores": "2",
             "Clock": "3.4 GHz",
             "Socket": "Socket AM4",
             "Process": "12 nm",
@@ -80,7 +80,7 @@
         {
             "Name": "EPYC 7232P",
             "Codename": "Rome",
-            "Cores": "Aug-16",
+            "Cores": "8",
             "Clock": "3.1 to 3.2 GHz",
             "Socket": "Socket SP3",
             "Process": "7 nm",
@@ -91,7 +91,7 @@
         {
             "Name": "EPYC 7252",
             "Codename": "Rome",
-            "Cores": "Aug-16",
+            "Cores": "8",
             "Clock": "2.8 to 3.2 GHz",
             "Socket": "Socket SP3",
             "Process": "7 nm",
@@ -102,7 +102,7 @@
         {
             "Name": "EPYC 7262",
             "Codename": "Rome",
-            "Cores": "Aug-16",
+            "Cores": "8",
             "Clock": "3.1 to 3.3 GHz",
             "Socket": "Socket SP3",
             "Process": "7 nm",
@@ -113,7 +113,7 @@
         {
             "Name": "EPYC 7272",
             "Codename": "Rome",
-            "Cores": "Dec-24",
+            "Cores": "12",
             "Clock": "2.6 to 3.2 GHz",
             "Socket": "Socket SP3",
             "Process": "7 nm",
@@ -124,7 +124,7 @@
         {
             "Name": "EPYC 7282",
             "Codename": "Rome",
-            "Cores": "16 / 32",
+            "Cores": "16",
             "Clock": "2.8 to 3.2 GHz",
             "Socket": "Socket SP3",
             "Process": "7 nm",
@@ -135,7 +135,7 @@
         {
             "Name": "EPYC 72F3",
             "Codename": "Milan",
-            "Cores": "Aug-16",
+            "Cores": "8",
             "Clock": "3.7 to 4.1 GHz",
             "Socket": "Socket SP3",
             "Process": "7 nm",
@@ -498,7 +498,7 @@
         {
             "Name": "EPYC 7F32",
             "Codename": "Rome",
-            "Cores": "Aug-16",
+            "Cores": "8",
             "Clock": "3.7 to 3.9 GHz",
             "Socket": "Socket SP3",
             "Process": "7 nm",
@@ -542,7 +542,7 @@
         {
             "Name": "Ryzen 3 3100",
             "Codename": "Matisse",
-            "Cores": "4-Aug",
+            "Cores": "4",
             "Clock": "3.6 to 3.9 GHz",
             "Socket": "Socket AM4",
             "Process": "7 nm",
@@ -553,7 +553,7 @@
         {
             "Name": "Ryzen 3 3250U",
             "Codename": "Picasso",
-            "Cores": "2-Apr",
+            "Cores": "2",
             "Clock": "2.6 to 3.5 GHz",
             "Socket": "Socket FP5",
             "Process": "12 nm",
@@ -564,7 +564,7 @@
         {
             "Name": "Ryzen 3 3300X",
             "Codename": "Matisse",
-            "Cores": "4-Aug",
+            "Cores": "4",
             "Clock": "3.8 to 4.3 GHz",
             "Socket": "Socket AM4",
             "Process": "7 nm",
@@ -575,7 +575,7 @@
         {
             "Name": "Ryzen 3 4300G",
             "Codename": "Renoir",
-            "Cores": "4-Aug",
+            "Cores": "4",
             "Clock": "3.8 to 4 GHz",
             "Socket": "Socket AM4",
             "Process": "7 nm",
@@ -586,7 +586,7 @@
         {
             "Name": "Ryzen 3 4300GE",
             "Codename": "Renoir",
-            "Cores": "4-Aug",
+            "Cores": "4",
             "Clock": "3.5 to 4 GHz",
             "Socket": "Socket AM4",
             "Process": "7 nm",
@@ -608,7 +608,7 @@
         {
             "Name": "Ryzen 3 5300G",
             "Codename": "Cezanne",
-            "Cores": "4-Aug",
+            "Cores": "4",
             "Clock": "4 to 4.2 GHz",
             "Socket": "Socket AM4",
             "Process": "7 nm",
@@ -619,7 +619,7 @@
         {
             "Name": "Ryzen 3 PRO 4350G",
             "Codename": "Renoir",
-            "Cores": "4-Aug",
+            "Cores": "4",
             "Clock": "3.8 to 4 GHz",
             "Socket": "Socket AM4",
             "Process": "7 nm",
@@ -630,7 +630,7 @@
         {
             "Name": "Ryzen 3 PRO 4350GE",
             "Codename": "Renoir",
-            "Cores": "4-Aug",
+            "Cores": "4",
             "Clock": "3.5 to 4 GHz",
             "Socket": "Socket AM4",
             "Process": "7 nm",
@@ -652,7 +652,7 @@
         {
             "Name": "Ryzen 5 3580U",
             "Codename": "Picasso",
-            "Cores": "4-Aug",
+            "Cores": "4",
             "Clock": "2.1 to 3.7 GHz",
             "Socket": "Socket FP5",
             "Process": "12 nm",
@@ -674,7 +674,7 @@
         {
             "Name": "Ryzen 5 4600G",
             "Codename": "Renoir",
-            "Cores": "6-Dec",
+            "Cores": "6",
             "Clock": "3.7 to 4.2 GHz",
             "Socket": "Socket AM4",
             "Process": "7 nm",
@@ -685,7 +685,7 @@
         {
             "Name": "Ryzen 5 4600GE",
             "Codename": "Renoir",
-            "Cores": "6-Dec",
+            "Cores": "6",
             "Clock": "3.3 to 4.2 GHz",
             "Socket": "Socket AM4",
             "Process": "7 nm",
@@ -696,7 +696,7 @@
         {
             "Name": "Ryzen 5 4600H",
             "Codename": "Renoir",
-            "Cores": "6-Dec",
+            "Cores": "6",
             "Clock": "3 to 4 GHz",
             "Socket": "Socket FP6",
             "Process": "7 nm",
@@ -707,7 +707,7 @@
         {
             "Name": "Ryzen 5 4600HS",
             "Codename": "Renoir",
-            "Cores": "6-Dec",
+            "Cores": "6",
             "Clock": "3 to 4 GHz",
             "Socket": "Socket FP6",
             "Process": "7 nm",
@@ -718,7 +718,7 @@
         {
             "Name": "Ryzen 5 4600U",
             "Codename": "Renoir",
-            "Cores": "6-Dec",
+            "Cores": "6",
             "Clock": "2.1 to 4 GHz",
             "Socket": "Socket FP6",
             "Process": "7 nm",
@@ -729,7 +729,7 @@
         {
             "Name": "Ryzen 5 5500U",
             "Codename": "Lucienne",
-            "Cores": "6-Dec",
+            "Cores": "6",
             "Clock": "2.1 to 4 GHz",
             "Socket": "Socket FP6",
             "Process": "7 nm",
@@ -740,7 +740,7 @@
         {
             "Name": "Ryzen 5 5600G",
             "Codename": "Cezanne",
-            "Cores": "6-Dec",
+            "Cores": "6",
             "Clock": "3.9 to 4.4 GHz",
             "Socket": "Socket AM4",
             "Process": "7 nm",
@@ -751,7 +751,7 @@
         {
             "Name": "Ryzen 5 5600X",
             "Codename": "Vermeer",
-            "Cores": "6-Dec",
+            "Cores": "6",
             "Clock": "3.7 to 4.6 GHz",
             "Socket": "Socket AM4",
             "Process": "7 nm",
@@ -762,7 +762,7 @@
         {
             "Name": "Ryzen 5 PRO 4650G",
             "Codename": "Renoir",
-            "Cores": "6-Dec",
+            "Cores": "6",
             "Clock": "3.7 to 4.2 GHz",
             "Socket": "Socket AM4",
             "Process": "7 nm",
@@ -773,7 +773,7 @@
         {
             "Name": "Ryzen 5 PRO 4650GE",
             "Codename": "Renoir",
-            "Cores": "6-Dec",
+            "Cores": "6",
             "Clock": "3.3 to 4.2 GHz",
             "Socket": "Socket AM4",
             "Process": "7 nm",
@@ -784,7 +784,7 @@
         {
             "Name": "Ryzen 7 3780U",
             "Codename": "Picasso",
-            "Cores": "4-Aug",
+            "Cores": "4",
             "Clock": "2.3 to 4 GHz",
             "Socket": "Socket FP5",
             "Process": "12 nm",
@@ -795,7 +795,7 @@
         {
             "Name": "Ryzen 7 3800XT",
             "Codename": "Matisse 2",
-            "Cores": "Aug-16",
+            "Cores": "8",
             "Clock": "3.8 to 4.7 GHz",
             "Socket": "Socket AM4",
             "Process": "7 nm",
@@ -806,7 +806,7 @@
         {
             "Name": "Ryzen 7 4700G",
             "Codename": "Renoir",
-            "Cores": "Aug-16",
+            "Cores": "8",
             "Clock": "3.6 to 4.4 GHz",
             "Socket": "Socket AM4",
             "Process": "7 nm",
@@ -817,7 +817,7 @@
         {
             "Name": "Ryzen 7 4700GE",
             "Codename": "Renoir",
-            "Cores": "Aug-16",
+            "Cores": "8",
             "Clock": "3.1 to 4.3 GHz",
             "Socket": "Socket AM4",
             "Process": "7 nm",
@@ -839,7 +839,7 @@
         {
             "Name": "Ryzen 7 4800H",
             "Codename": "Renoir",
-            "Cores": "Aug-16",
+            "Cores": "8",
             "Clock": "2.9 to 4.2 GHz",
             "Socket": "Socket FP6",
             "Process": "7 nm",
@@ -850,7 +850,7 @@
         {
             "Name": "Ryzen 7 4800HS",
             "Codename": "Renoir",
-            "Cores": "Aug-16",
+            "Cores": "8",
             "Clock": "2.9 to 4.2 GHz",
             "Socket": "Socket FP6",
             "Process": "7 nm",
@@ -861,7 +861,7 @@
         {
             "Name": "Ryzen 7 4800U",
             "Codename": "Renoir",
-            "Cores": "Aug-16",
+            "Cores": "8",
             "Clock": "1.8 to 4.2 GHz",
             "Socket": "Socket FP6",
             "Process": "7 nm",
@@ -872,7 +872,7 @@
         {
             "Name": "Ryzen 7 5700G",
             "Codename": "Cezanne",
-            "Cores": "Aug-16",
+            "Cores": "8",
             "Clock": "3.8 to 4.6 GHz",
             "Socket": "Socket AM4",
             "Process": "7 nm",
@@ -883,7 +883,7 @@
         {
             "Name": "Ryzen 7 5800H",
             "Codename": "Cezanne",
-            "Cores": "Aug-16",
+            "Cores": "8",
             "Clock": "3.2 to 4.4 GHz",
             "Socket": "Socket FP6",
             "Process": "7 nm",
@@ -894,7 +894,7 @@
         {
             "Name": "Ryzen 7 5800HS",
             "Codename": "Cezanne",
-            "Cores": "Aug-16",
+            "Cores": "8",
             "Clock": "2.8 to 4.4 GHz",
             "Socket": "Socket FP6",
             "Process": "7 nm",
@@ -905,7 +905,7 @@
         {
             "Name": "Ryzen 7 5800X",
             "Codename": "Vermeer",
-            "Cores": "Aug-16",
+            "Cores": "8",
             "Clock": "3.8 to 4.7 GHz",
             "Socket": "Socket AM4",
             "Process": "7 nm",
@@ -916,7 +916,7 @@
         {
             "Name": "Ryzen 7 PRO 4750G",
             "Codename": "Renoir",
-            "Cores": "Aug-16",
+            "Cores": "8",
             "Clock": "3.6 to 4.4 GHz",
             "Socket": "Socket AM4",
             "Process": "7 nm",
@@ -927,7 +927,7 @@
         {
             "Name": "Ryzen 7 PRO 4750GE",
             "Codename": "Renoir",
-            "Cores": "Aug-16",
+            "Cores": "8",
             "Clock": "3.1 to 4.3 GHz",
             "Socket": "Socket AM4",
             "Process": "7 nm",
@@ -938,7 +938,7 @@
         {
             "Name": "Ryzen 9 3900XT",
             "Codename": "Matisse 2",
-            "Cores": "Dec-24",
+            "Cores": "12",
             "Clock": "3.9 to 4.7 GHz",
             "Socket": "Socket AM4",
             "Process": "7 nm",
@@ -960,7 +960,7 @@
         {
             "Name": "Ryzen 9 4900H",
             "Codename": "Renoir",
-            "Cores": "Aug-16",
+            "Cores": "8",
             "Clock": "3.3 to 4.4 GHz",
             "Socket": "Socket FP6",
             "Process": "7 nm",
@@ -971,7 +971,7 @@
         {
             "Name": "Ryzen 9 4900HS",
             "Codename": "Renoir",
-            "Cores": "Aug-16",
+            "Cores": "8",
             "Clock": "3 to 4.3 GHz",
             "Socket": "Socket FP6",
             "Process": "7 nm",
@@ -982,7 +982,7 @@
         {
             "Name": "Ryzen 9 5900HX",
             "Codename": "Cezanne",
-            "Cores": "Aug-16",
+            "Cores": "8",
             "Clock": "3.3 to 4.6 GHz",
             "Socket": "Socket FP6",
             "Process": "7 nm",
@@ -993,7 +993,7 @@
         {
             "Name": "Ryzen 9 5900X",
             "Codename": "Vermeer",
-            "Cores": "Dec-24",
+            "Cores": "12",
             "Clock": "3.7 to 4.8 GHz",
             "Socket": "Socket AM4",
             "Process": "7 nm",
@@ -1015,7 +1015,7 @@
         {
             "Name": "Ryzen 9 5980HS",
             "Codename": "Cezanne",
-            "Cores": "Aug-16",
+            "Cores": "8",
             "Clock": "3 to 4.8 GHz",
             "Socket": "Socket FP6",
             "Process": "7 nm",
@@ -1070,7 +1070,7 @@
         {
             "Name": "Ryzen Threadripper PRO 3945WX",
             "Codename": "Matisse",
-            "Cores": "Dec-24",
+            "Cores": "12",
             "Clock": "4 to 4.3 GHz",
             "Socket": "Socket WRX8",
             "Process": "7 nm",

@@ -278,7 +278,7 @@
         {
             "Name": "Core i7-10870H",
             "Codename": "Comet Lake-H",
-            "Cores": "Au",
+            "Cores": "8",
             "Clock": "2.2 to 5 GHz",
             "Socket": "BGA1440",
             "Process": "14 nm",
@@ -311,7 +311,7 @@
         {
             "Name": "Core i7-11700",
             "Codename": "Rocket Lake",
-            "Cores": "Au",
+            "Cores": "8",
             "Clock": "2.5 to 4.9 GHz",
             "Socket": "Socket 1200",
             "Process": "14 nm",
@@ -322,7 +322,7 @@
         {
             "Name": "Core i7-11700F",
             "Codename": "Rocket Lake",
-            "Cores": "Au",
+            "Cores": "8",
             "Clock": "2.5 to 4.9 GHz",
             "Socket": "Socket 1200",
             "Process": "14 nm",
@@ -333,7 +333,7 @@
         {
             "Name": "Core i7-11700K",
             "Codename": "Rocket Lake",
-            "Cores": "Au",
+            "Cores": "8",
             "Clock": "3.6 to 5 GHz",
             "Socket": "Socket 1200",
             "Process": "14 nm",
@@ -344,7 +344,7 @@
         {
             "Name": "Core i7-11700KF",
             "Codename": "Rocket Lake",
-            "Cores": "Au",
+            "Cores": "8",
             "Clock": "3.6 to 5 GHz",
             "Socket": "Socket 1200",
             "Process": "14 nm",
@@ -355,7 +355,7 @@
         {
             "Name": "Core i7-11700T",
             "Codename": "Rocket Lake",
-            "Cores": "Au",
+            "Cores": "8",
             "Clock": "1.4 to 4.6 GHz",
             "Socket": "Socket 1200",
             "Process": "14 nm",
@@ -366,7 +366,7 @@
         {
             "Name": "Core i7-11800H",
             "Codename": "Tiger Lake-H",
-            "Cores": "Au",
+            "Cores": "8",
             "Clock": "2.3 to 4.6 GHz",
             "Socket": "BGA1499",
             "Process": "10 nm",
@@ -377,7 +377,7 @@
         {
             "Name": "Core i7-11850H",
             "Codename": "Tiger Lake-H",
-            "Cores": "Au",
+            "Cores": "8",
             "Clock": "2.5 to 4.8 GHz",
             "Socket": "BGA1499",
             "Process": "10 nm",
@@ -399,7 +399,7 @@
         {
             "Name": "Core i9-11900",
             "Codename": "Rocket Lake",
-            "Cores": "Au",
+            "Cores": "8",
             "Clock": "2.5 to 5.2 GHz",
             "Socket": "Socket 1200",
             "Process": "14 nm",
@@ -410,7 +410,7 @@
         {
             "Name": "Core i9-11900F",
             "Codename": "Rocket Lake",
-            "Cores": "Au",
+            "Cores": "8",
             "Clock": "2.5 to 5.2 GHz",
             "Socket": "Socket 1200",
             "Process": "14 nm",
@@ -421,7 +421,7 @@
         {
             "Name": "Core i9-11900H",
             "Codename": "Tiger Lake-H",
-            "Cores": "Au",
+            "Cores": "8",
             "Clock": "2.5 to 4.9 GHz",
             "Socket": "BGA1499",
             "Process": "10 nm",
@@ -432,7 +432,7 @@
         {
             "Name": "Core i9-11900K",
             "Codename": "Rocket Lake",
-            "Cores": "Au",
+            "Cores": "8",
             "Clock": "3.5 to 5.3 GHz",
             "Socket": "Socket 1200",
             "Process": "14 nm",
@@ -443,7 +443,7 @@
         {
             "Name": "Core i9-11900KF",
             "Codename": "Rocket Lake",
-            "Cores": "Au",
+            "Cores": "8",
             "Clock": "3.5 to 5.3 GHz",
             "Socket": "Socket 1200",
             "Process": "14 nm",
@@ -454,7 +454,7 @@
         {
             "Name": "Core i9-11900T",
             "Codename": "Rocket Lake",
-            "Cores": "Au",
+            "Cores": "8",
             "Clock": "1.5 to 4.9 GHz",
             "Socket": "Socket 1200",
             "Process": "14 nm",
@@ -465,7 +465,7 @@
         {
             "Name": "Core i9-11950H",
             "Codename": "Tiger Lake-H",
-            "Cores": "Au",
+            "Cores": "8",
             "Clock": "2.6 to 5 GHz",
             "Socket": "BGA1499",
             "Process": "10 nm",
@@ -476,7 +476,7 @@
         {
             "Name": "Core i9-11980HK",
             "Codename": "Tiger Lake-H",
-            "Cores": "Au",
+            "Cores": "8",
             "Clock": "2.6 to 5 GHz",
             "Socket": "BGA1499",
             "Process": "10 nm",
@@ -542,7 +542,7 @@
         {
             "Name": "Xeon Gold 5315Y",
             "Codename": "Ice Lake-SP",
-            "Cores": "Au",
+            "Cores": "8",
             "Clock": "3.2 to 3.6 GHz",
             "Socket": "Socket 4189",
             "Process": "10 nm",
@@ -718,7 +718,7 @@
         {
             "Name": "Xeon Gold 6334",
             "Codename": "Ice Lake-SP",
-            "Cores": "Au",
+            "Cores": "8",
             "Clock": "3.6 to 3.7 GHz",
             "Socket": "Socket 4189",
             "Process": "10 nm",
@@ -883,7 +883,7 @@
         {
             "Name": "Xeon Platinum 8356H",
             "Codename": "Cooper Lake-SP",
-            "Cores": "Au",
+            "Cores": "8",
             "Clock": "3.9 to 4.4 GHz",
             "Socket": "Socket 4189",
             "Process": "14 nm",
@@ -1037,7 +1037,7 @@
         {
             "Name": "Xeon Silver 4309Y",
             "Codename": "Ice Lake-SP",
-            "Cores": "Au",
+            "Cores": "8",
             "Clock": "2.8 to 3.6 GHz",
             "Socket": "Socket 4189",
             "Process": "10 nm",
@@ -1048,7 +1048,7 @@
         {
             "Name": "Xeon Silver 4310",
             "Codename": "Ice Lake-SP",
-            "Cores": "De",
+            "Cores": "12",
             "Clock": "2.1 to 3.3 GHz",
             "Socket": "Socket 4189",
             "Process": "10 nm",
@@ -1059,7 +1059,7 @@
         {
             "Name": "Xeon Silver 4310T",
             "Codename": "Ice Lake-SP",
-            "Cores": "Oc",
+            "Cores": "10",
             "Clock": "2.3 to 3.4 GHz",
             "Socket": "Socket 4189",
             "Process": "10 nm",
@@ -1103,7 +1103,7 @@
         {
             "Name": "Xeon W-11955M",
             "Codename": "Tiger Lake-H",
-            "Cores": "Au",
+            "Cores": "8",
             "Clock": "2.6 to 5 GHz",
             "Socket": "BGA1499",
             "Process": "10 nm",
