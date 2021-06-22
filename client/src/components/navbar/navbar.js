@@ -86,16 +86,14 @@ const Navbar = () => {
               <MenuItem onClick={() => history.push("/forum")}>
                 <ForumIcon /> Foro
               </MenuItem>
-              {/*               {email && (
-                <MenuItem onClick={() => dispatch(logout())}>
-                  <ExitToAppIcon /> Logout
-                </MenuItem>
-              )}
-              {!email && (
-                <MenuItem onClick={() => history.push("/login")}>
-                  <AccountBoxIcon /> Ingresar
-                </MenuItem>
-              )} */}
+
+              <MenuItem onClick={() => dispatch(logout())}>
+                <ExitToAppIcon /> Logout
+              </MenuItem>
+
+              <MenuItem onClick={() => history.push("/login")}>
+                <AccountBoxIcon /> Ingresar
+              </MenuItem>
             </Menu>
           </div>
         </Toolbar>
