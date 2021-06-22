@@ -7,9 +7,12 @@ import {
   FormLabel,
   Grid,
 } from "@material-ui/core";
+import { useDispatch } from "react-redux";
+import { login } from "../../redux/actionCreaton.js";
 import axios from "axios";
 
 const Login = () => {
+  const dispatch = useDispatch();
   //Iniciamos un estado para poder guardar los datos de los inputs y damos estado de inicio con UseState
   const [input, setInput] = useState({
     email: "",
@@ -19,9 +22,9 @@ const Login = () => {
   //Función encargada de hacer la peticion de Login al server
   const getLogin = () => {
     //Axios es el encargado de hacer petición, especificamos la ruta y mandamos los valores del estado
-    axios
-      .post("http://localhost:5000/auth/login", input)
-      .then(({ data }) => console.log(data));
+    axios.post("http://localhost:5000/auth/login", input).then(({ data }) => {
+      dispatch(login(data));
+    });
   };
 
   return (
@@ -42,7 +45,7 @@ const Login = () => {
             required={true}
             type="email"
             value={input.email}
-            onChange={(e) => setInput({...input, email: e.target.value })}
+            onChange={(e) => setInput({ ...input, email: e.target.value })}
           />
           {/*                     <FormHelperText id='email-helper'>Ingresa tu direccion de email</FormHelperText> */}
         </FormControl>
