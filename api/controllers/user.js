@@ -1,29 +1,22 @@
-const sequelize = require('sequelize');
 const { User } = require('../models/index.js');
 
-
 module.exports = {
+    //Especificamos que usuario necesitamos 
     getUserById: function (id) {
         return User.findByPk(id);
     },
-
+    //Especificamos cual eliminar
     deleteUser: function (id) {
-        //Get current date in mysql format
-        let timeDeleted = new Date().toISOString().slice(0, 19).replace('T', ' ');
-
-        return User.update({ deletedAt: timeDeleted }, {
-            where: {
-                id
-            }
-        });
+        return User.destroy(id);
     },
+    //Buscamos todos los usuarios
     read: function(){
         return User
         .findAll({
             attributes: ['id', 'email', 'name', 'roleId']
         })
     },
-
+    //Creamos
     create: function({email, name, password}){
         return User
         .create({
@@ -34,7 +27,12 @@ module.exports = {
         })
         .then(res => res)
     },
+    //Buscamos usuario por email
+    getUserByEmail: function(email){
+        return User.findOne({ where: { email } });
+    },
 
+    //Actualizamos usuario
     updateChanges: function(userId, changes){
         return User
         .update(

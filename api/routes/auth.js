@@ -2,52 +2,66 @@ const express = require("express");
 const bcrypt = require("bcrypt");
 const router = express.Router();
 const user = require("../controllers/user");
-const { getUserByEmail } = require("../controllers/auth.js");
 const { body, validationResult } = require("express-validator");
 
 router.post(
   "/register",
+  //VERIFACAMOS FORMATO
   body("email").isEmail(),
   body("password").isLength({ min: 6 }),
   function (req, res) {
+    // SI HAY ERROR GUARDAMOS
     const errors = validationResult(req);
-    validate(errors);
-    /* Encrypt password for send to BD */
-    /* we are driver like a promise, in the finish the encrypt call to create and change the pass for the passhash*/
+    validate(errors, res);
+    //ENCRIPTAMOS EL PASSSWORD
     hashPassword(req.body.password)
       .then((r) => user.create(req.body, (req.body.password = r), res))
       .then((r) => {
-        res.status(200).send(r);
+        return res.status(200).send(r);
       })
-      .catch((err) => err.toString());
+      .catch((err) => {
+        return err.toString();
+      });
   }
 );
 router.post(
   "/login",
+  //VALIDACIONES
   body("email").isEmail().normalizeEmail(),
   body("password").not().isEmpty().trim().escape(),
+  //VALIDACIONES
   async (req, res) => {
+    //SE ENCARGA DE VERIFICAR QUE LO QUE RECIBIMOS POR BODY TENGA EL FORMATO DESEADO
     const errors = validationResult(req);
+    //ASIGNAMOS A UNA VARIABLE ERROR
+    //SI HAY ERROR RETORNAMOS EL ERROR
     if (!errors.isEmpty()) {
       return res.status(402).json({ errors: errors.array() });
     }
+    //SOLICITAMOS LOS DATOS QUE NECESITAMOS
     const { email, password } = req.body;
+    //RESULT GUARDAR LOS RESULTADOS LA BUSQUEDA DEL USUARIO QUE INTENTA LOGUEARSE
     const result = await loginUser(email, password);
     if (!result) {
       return res.status(409).json("Incorrect username or password");
     } else {
       req.session.userId = user.id;
+      return res.status(200).json(result);
     }
   }
 );
 router.delete("/logout", async (req, res) => {
   req.session = null;
 });
+
 async function loginUser(email, password) {
   try {
-    const result = await getUserByEmail(email);
+    //Buscamos al usuario por su email
+    const result = await user.getUserByEmail(email);
     if (result) {
+      //Destructuramos los resultados
       const { dataValues } = result;
+      //Verificamos contraseña enviada vs contraseña de la base de datos
       const compare = await bcrypt.compare(password, dataValues.password);
       if (compare) {
         return result.dataValues;
@@ -65,7 +79,7 @@ async function hashPassword(password) {
   return passwordHash;
 }
 
-function validate(errors) {
+function validate(errors, res) {
   if (!errors.isEmpty()) {
     if (errors.errors.param == "email") {
       return res.status(400).send("Email invalido");

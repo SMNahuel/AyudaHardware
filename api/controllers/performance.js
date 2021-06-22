@@ -1,7 +1,6 @@
 exports.performance = (req, res) => {
 
     const {arquitectura, software } = req.body;
-    const elementos = [arquitectura, software]
     let perfomanceCpu = arquitectura.cpu_intel ? this.perfomanceIntel(arquitectura, software) : this.performanceAmd(arquitectura, software)
     let perfomanceGpu = this.perfomanceGpu(arquitectura, software)
     console.log(perfomanceGpu)
@@ -9,7 +8,6 @@ exports.performance = (req, res) => {
 }
 
 exports.perfomanceIntel = (arquitectura, software) =>{
-    console.log("Cpu intel")
     const { Cores, Clock } = arquitectura.cpu_intel;
     let min = this.parseToInt(Clock) > this.parseToInt(software.min.intel) 
     let med = this.parseToInt(Clock) > this.parseToInt(software.med.intel)
