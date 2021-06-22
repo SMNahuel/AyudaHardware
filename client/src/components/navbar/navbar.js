@@ -86,11 +86,9 @@ const Navbar = () => {
               <MenuItem onClick={() => history.push("/forum")}>
                 <ForumIcon /> Foro
               </MenuItem>
-
               <MenuItem onClick={() => dispatch(logout())}>
                 <ExitToAppIcon /> Logout
               </MenuItem>
-
               <MenuItem onClick={() => history.push("/login")}>
                 <AccountBoxIcon /> Ingresar
               </MenuItem>
