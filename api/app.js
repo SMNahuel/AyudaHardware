@@ -25,7 +25,7 @@ app.use(express.static(publicDirectory));
 app.use(cors()); //Habilitamos peticiones (GET - PUT - POST - DELETE)
 app.use(logger("dev")); //Muestra peticiones
 app.use(express.json());
-app.use(express.urlencoded({ extended: false })); // ? 
+app.use(express.urlencoded({ extended: false })); // ?
 app.set("view engine", "hbs"); // Extensiones de la vista
 
 //Conect to BD
@@ -50,8 +50,7 @@ sequelize
 app.use("/user", require("./routes/user"));
 app.use("/auth", require("./routes/auth"));
 app.use("/post", require("./routes/post"));
-app.use("/cpu/", require("./routes/getComponent"));
-app.use("/gpu/", require("./routes/getComponent"));
+app.use("/part", require("./routes/getComponent"));
 app.use("/perfomance", require("./routes/perfomance"));
 
 app.listen(5000, () => {

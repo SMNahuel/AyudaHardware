@@ -9,21 +9,24 @@ router.post(
   //VERIFACAMOS FORMATO
   body("email").isEmail(),
   body("password").isLength({ min: 6 }),
-  function (req, res) {
-    // SI HAY ERROR GUARDAMOS
-    const errors = validationResult(req);
-    validate(errors, res);
-    //ENCRIPTAMOS EL PASSSWORD
-    hashPassword(req.body.password)
-      .then((r) => user.create(req.body, (req.body.password = r), res))
-      .then((r) => {
-        return res.status(200).send(r);
-      })
-      .catch((err) => {
-        return err.toString();
-      });
+  async function (req, res) {
+    try {
+      // SI HAY ERROR GUARDAMOS
+      const errors = validationResult(req);
+      await validate(errors, res);
+      //ENCRIPTAMOS EL PASSSWORD
+      const hash = await hashPassword(req.body.password);
+      req.body.password = hash;
+
+      const { dataValues } = await user.create(req.body);
+
+      return res.status(200).json(dataValues);
+    } catch (err) {
+      return res.status(500);
+    }
   }
 );
+
 router.post(
   "/login",
   //VALIDACIONES
@@ -79,7 +82,7 @@ async function hashPassword(password) {
   return passwordHash;
 }
 
-function validate(errors, res) {
+function validate(errors) {
   if (!errors.isEmpty()) {
     if (errors.errors.param == "email") {
       return res.status(400).send("Email invalido");
