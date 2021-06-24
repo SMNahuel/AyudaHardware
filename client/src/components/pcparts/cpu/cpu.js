@@ -13,7 +13,7 @@ const Cpu = ({ handleSetPart }) => {
   });
 
   const changeToIntel = async () => {
-    await axios.get("http://localhost:5000/cpu/intel").then(({ data }) =>
+    await axios.get("http://localhost:5000/part/intel").then(({ data }) =>
       setCpu({
         ...cpu,
         list: data.intel_cpu,
@@ -25,7 +25,7 @@ const Cpu = ({ handleSetPart }) => {
   };
 
   const changeToAmd = async () => {
-    await axios.get("http://localhost:5000/cpu/amd").then(({ data }) =>
+    await axios.get("http://localhost:5000/part/amd").then(({ data }) =>
       setCpu({
         ...cpu,
         list: data.amd_cpu,

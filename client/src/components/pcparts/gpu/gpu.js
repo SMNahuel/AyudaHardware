@@ -5,8 +5,7 @@ const Gpu = () => {
   const [list, setList] = useState("");
 
   useEffect(async () => {
-    await axios.get("http://localhost:5000/gpu").then((data) => setList(data));
-    console.log(list);
+    axios.get("http://localhost:5000/part/gpu").then((data) => setList(data));
   }, []);
 
   return <div></div>;

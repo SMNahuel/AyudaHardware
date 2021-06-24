@@ -1,4 +1,5 @@
 import React from "react";
+import SuccessRegister from "./components/register/success.register.js";
 import Register from "./components/register/register.js";
 import Pcparts from "./components/pcparts/pcparts.js";
 import Footer from "./components/footer/footer.js";
@@ -20,6 +21,11 @@ function App() {
         <Route path="/pc">
           <NavBar />
           <Pcparts />
+          <Footer />
+        </Route>
+        <Route path="/success_register">
+          <NavBar />
+          <SuccessRegister />
           <Footer />
         </Route>
         <Route path="/register">

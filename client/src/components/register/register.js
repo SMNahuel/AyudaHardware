@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import axios from "axios";
 
 import Button from "@material-ui/core/Button"; //Importacion de botones
@@ -6,6 +7,7 @@ import { FormHelperText } from "@material-ui/core";
 import { FormControl, InputLabel, Input, Grid } from "@material-ui/core";
 
 const Register = () => {
+  const history = useHistory();
   const [input, setInput] = useState({
     email: "",
     password: "",
@@ -19,11 +21,13 @@ const Register = () => {
     //Axios es el encargado de hacer petición, especificamos la ruta y mandamos los valores del estado
     try {
       setState({ isLoading: true });
-      const response = await axios.post(
-        "http://localhost:5000/auth/register",
-        input
-      );
-      console.log(response);
+      const response = await axios.post("http://localhost:5000/auth/register", {
+        name: input.name,
+        password: input.password,
+        email: input.email,
+      });
+      if (response.status === 200) history.push("/success_register");
+      if (response.status !== 200) return alert("Error revise los datos");
     } catch (error) {
       console.log(error);
     } finally {
@@ -76,11 +80,12 @@ const Register = () => {
       <Grid item md={12}>
         <FormControl>
           <InputLabel htmlFor="">Password</InputLabel>
-          <Input id="pwd" type="password" />
-          <FormHelperText
-            id="password-helper"
+          <Input
+            id="pwd"
+            type="password"
             onChange={(e) => setInput({ ...input, password: e.target.value })}
-          >
+          />
+          <FormHelperText id="password-helper">
             Ingresa tu password
           </FormHelperText>
         </FormControl>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
+import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import DesktopMacIcon from "@material-ui/icons/DesktopMac";
 import AccountBoxIcon from "@material-ui/icons/AccountBox";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
@@ -31,6 +32,8 @@ const useStyles = makeStyles((theme) => ({
 
 const Navbar = () => {
   const dispatch = useDispatch();
+  const email = useSelector((state) => state.email);
+  const name = useSelector((state) => state.name);
   var history = useHistory();
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = useState(null);
@@ -56,6 +59,7 @@ const Navbar = () => {
             Ayuda Hardware
           </Typography>
           <div>
+            {name}
             <IconButton
               aria-label="account of current user"
               aria-controls="menu-appbar"
@@ -63,8 +67,10 @@ const Navbar = () => {
               onClick={handleMenu}
               color="inherit"
             >
-              <MenuIcon />
+              {!email && <MenuIcon />}
+              {email && <AccountCircleIcon />}
             </IconButton>
+
             <Menu
               id="menu-appbar"
               anchorEl={anchorEl}
@@ -86,12 +92,21 @@ const Navbar = () => {
               <MenuItem onClick={() => history.push("/forum")}>
                 <ForumIcon /> Foro
               </MenuItem>
-              <MenuItem onClick={() => dispatch(logout())}>
-                <ExitToAppIcon /> Logout
-              </MenuItem>
-              <MenuItem onClick={() => history.push("/login")}>
-                <AccountBoxIcon /> Ingresar
-              </MenuItem>
+              {email && (
+                <MenuItem onClick={() => dispatch(logout())}>
+                  <ExitToAppIcon /> Logout
+                </MenuItem>
+              )}
+              {!email && (
+                <MenuItem onClick={() => history.push("/login")}>
+                  <AccountBoxIcon /> Ingresar
+                </MenuItem>
+              )}
+              {!email && (
+                <MenuItem onClick={() => history.push("/register")}>
+                  <ExitToAppIcon /> Registrar
+                </MenuItem>
+              )}
             </Menu>
           </div>
         </Toolbar>
