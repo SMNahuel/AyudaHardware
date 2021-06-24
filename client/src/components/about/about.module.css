@@ -5,10 +5,13 @@
     background-color: #dddddd;
     margin: 20px;
     flex-direction: column;
-    margin-bottom: 100px;
-    padding: 20px
+    margin-bottom: 150px;
+    padding: 20px;
+    text-align: center;
+
 }
 
 .alumn{
-    margin-top: 20px;
+    
+    margin-bottom: 30px;
 }

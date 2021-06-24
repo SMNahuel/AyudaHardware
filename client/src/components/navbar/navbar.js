@@ -20,13 +20,23 @@ import { logout } from "../../redux/actionCreaton.js";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
-    backgroundColor: "#ffeedb",
+      
   },
+  AppBar: {
+
+    backgroundColor: "#010102",
+    paddingBottom: 30,
+    
+  },
+
   menuButton: {
     marginRight: theme.spacing(2),
   },
   title: {
+    marginTop: "2rem",
     flexGrow: 1,
+    textTransform: "uppercase",
+    color: "green"
   },
 }));
 
@@ -49,10 +59,10 @@ const Navbar = () => {
 
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar className={classes.AppBar} position="static">
         <Toolbar>
           <Typography
-            variant="h6"
+            variant="h4" 
             className={classes.title}
             onClick={() => history.push("/")}
           >
