@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import Button from "@material-ui/core/Button"; //Importacion de botones
+import Button from "@material-ui/core/Button";
+import { useHistory } from "react-router-dom"; 
 import {
   FormControl,
   InputLabel,
@@ -12,6 +13,7 @@ import { login } from "../../redux/actionCreaton.js";
 import axios from "axios";
 
 const Login = () => {
+  var history = useHistory();
   const dispatch = useDispatch();
   //Iniciamos un estado para poder guardar los datos de los inputs y damos estado de inicio con UseState
   const [input, setInput] = useState({
@@ -30,7 +32,7 @@ const Login = () => {
   return (
     <Grid
       container
-      spacing={1}
+      spacing={2}
       direction="column"
       alignItems="center"
       justify="center"
@@ -63,10 +65,29 @@ const Login = () => {
         </FormControl>
       </Grid>
       <Grid item md={12}>
+        <FormControl>
+          <InputLabel htmlFor="">Repite el password</InputLabel>
+          <Input
+            id="pwd"
+            type="password"
+            value={input.password}
+            onChange={(e) => setInput({ ...input, password: e.target.value })}
+          />
+          {/*                     <FormHelperText id='password-helper'>Ingresa tu password</FormHelperText> */}
+        </FormControl>
+      </Grid>
+      <Grid item md={12}>
         <Button variant="contained" color="primary" onClick={() => getLogin()}>
           Iniciar sesion
         </Button>
       </Grid>
+        <h3>¿Todavia no tienes cuenta?</h3>
+      <Grid item md={12}>
+        <Button variant="contained" color="primary" onClick={() => history.push("/register")}>
+          Registrate
+        </Button>
+      </Grid>
+
     </Grid>
   );
 };

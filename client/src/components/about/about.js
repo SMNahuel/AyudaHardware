@@ -5,22 +5,17 @@ import CardAlumn from './cardAlum/cardAlumn.js';
 const About = () =>{
     return(
         <div className={style.container}>
-            <h3>Mision</h3>
-            <p>Why do we use it?
-It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+            <h3>Somos Alumnos de 3º Año del IFTS Nº16</h3>
+            <p><strong>Ayuda Hardware</strong> es nuestro proyecto para la materia de <strong>¨Taller de Prácticas de Desarrollo e Implementacion(TPDI)¨</strong>.</p>
+            <p>Se trata de un sistema web el cual facilita el armado de una PC, proporciona la información de sus componentes de manera intuitiva y permite a sus usuarios participar en una red social propia dentro de un foro.</p>
             <h3>Integrantes</h3>
             <div className={style.alumn}>
-                <CardAlumn name="Alumno 1"/>
+                <CardAlumn name="Emmanuel Baspino"/>
             </div>
             <div className={style.alumn}>
-                <CardAlumn name="Alumno 2"/>
+                <CardAlumn name="Abel Correa"/>
             </div>
-            <div className={style.alumn}>
-                <CardAlumn name="Alumno 3"/>
-            </div>
-            <div className={style.alumn}>
-                <CardAlumn name="Alumno 4"/>
-            </div>
+            
         </div>
     )
 }

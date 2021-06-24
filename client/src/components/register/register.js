@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
-
+import { useHistory } from "react-router-dom";
 import Button from "@material-ui/core/Button"; //Importacion de botones
 import { FormHelperText } from "@material-ui/core";
 import { FormControl, InputLabel, Input, Grid } from "@material-ui/core";
 
 const Register = () => {
+  var history = useHistory();
   const [input, setInput] = useState({
     email: "",
     password: "",
@@ -94,6 +95,17 @@ const Register = () => {
           Registrarse
         </Button>
       </Grid>
+      <h3>¿Ya tienes cuenta?</h3>
+      <Grid item md={12}>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => history.push("/login")}
+        >
+          Login
+        </Button>
+      </Grid>
+
     </Grid>
   );
 };
