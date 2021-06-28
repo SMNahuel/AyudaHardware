@@ -1,45 +1,44 @@
+const e = require('express');
 const { User } = require('../models/index.js');
 
 module.exports = {
     //Especificamos que usuario necesitamos 
-    getUserById: function (id) {
+    getUserById: function(id) {
         return User.findByPk(id);
     },
     //Especificamos cual eliminar
-    deleteUser: function (id) {
+    deleteUser: function(id) {
         return User.destroy(id);
     },
     //Buscamos todos los usuarios
-    read: function(){
+    read: function() {
         return User
-        .findAll({
-            attributes: ['id', 'email', 'name', 'roleId']
-        })
+            .findAll({
+                attributes: ['id', 'email', 'name', 'roleId']
+            })
     },
     //Creamos
-    create: function({email, name, password}){
-        return User
-        .create({
-            name: name,
-            email: email,
-            password: password,
-            roleId: 2
-        })
-        .then(res => res)
+    create: async function({ email, name, password }) {
+        return User.create({
+                name: name,
+                email: email,
+                password: password,
+                roleId: 2
+            })
+            .then(res => res)
     },
     //Buscamos usuario por email
-    getUserByEmail: function(email){
+    getUserByEmail: function(email) {
         return User.findOne({ where: { email } });
     },
 
     //Actualizamos usuario
-    updateChanges: function(userId, changes){
+    updateChanges: function(userId, changes) {
         return User
-        .update(
-            changes, 
-            { where: { id: userId } }
-        )
-        .then(() => this.getUserById(userId))
+            .update(
+                changes, { where: { id: userId } }
+            )
+            .then(() => this.getUserById(userId))
     },
 
 };
