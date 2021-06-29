@@ -3,6 +3,7 @@ import { useHistory } from "react-router-dom";
 
 import DesktopMacIcon from "@material-ui/icons/DesktopMac";
 import AccountBoxIcon from "@material-ui/icons/AccountBox";
+import InfoIcon from '@material-ui/icons/Info';
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
@@ -95,6 +96,9 @@ const Navbar = () => {
               </MenuItem>
               <MenuItem onClick={() => history.push("/forum")}>
                 <ForumIcon /> Foro
+              </MenuItem>
+              <MenuItem onClick={() => history.push("/about")}>
+                <InfoIcon /> About
               </MenuItem>
               <MenuItem onClick={() => dispatch(logout())}>
                 <ExitToAppIcon /> Logout
