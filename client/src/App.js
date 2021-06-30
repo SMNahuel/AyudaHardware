@@ -3,6 +3,7 @@ import SuccessRegister from "./components/register/success.register.js";
 import Register from "./components/register/register.js";
 import Pcparts from "./components/pcparts/pcparts.js";
 import Footer from "./components/footer/footer.js";
+import Profile from "./components/profile/profile";
 import NavBar from "./components/navbar/navbar.js";
 import About from "./components/about/about.js";
 import Login from "./components/login/login.js";
@@ -32,6 +33,10 @@ function App() {
         <Route path="/login">
           <NavBar />
           <Login />
+        </Route>
+        <Route path="/profile">
+          <NavBar />
+          <Profile />
         </Route>
         <Route path="/">
           <NavBar />

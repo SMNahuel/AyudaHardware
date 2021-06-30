@@ -4,6 +4,8 @@ import { useHistory } from "react-router-dom";
 import Button from "@material-ui/core/Button"; //Importacion de botones
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
 import style from "../login/login.module.css";
+
+
 const Register = () => {
   const history = useHistory();
   const [input, setInput] = useState({
