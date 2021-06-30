@@ -10,19 +10,22 @@ router.post(
   body("email").isEmail(),
   body("password").isLength({ min: 6 }),
   async function (req, res) {
-    try {
-      // SI HAY ERROR GUARDAMOS
-      const errors = validationResult(req);
-      await validate(errors, res);
+    // SI HAY ERROR GUARDAMOS
+    const errors = validationResult(req);
+    validate(errors, res);
+    const response = await user.getUserByEmail(req.body.email);
+    if (response === null) {
       //ENCRIPTAMOS EL PASSSWORD
-      const hash = await hashPassword(req.body.password);
-      req.body.password = hash;
-
-      const { dataValues } = await user.create(req.body);
-
-      return res.status(200).json(dataValues);
-    } catch (err) {
-      return res.status(500);
+      hashPassword(req.body.password)
+        .then((r) => user.create(req.body, (req.body.password = r), res))
+        .then((r) => {
+          return res.status(200).send(r);
+        })
+        .catch((err) => {
+          return err.toString();
+        });
+    } else {
+      return res.status(400).send("El email ya esta registrado");
     }
   }
 );
@@ -82,7 +85,7 @@ async function hashPassword(password) {
   return passwordHash;
 }
 
-function validate(errors) {
+function validate(errors, res) {
   if (!errors.isEmpty()) {
     if (errors.errors.param == "email") {
       return res.status(400).send("Email invalido");
