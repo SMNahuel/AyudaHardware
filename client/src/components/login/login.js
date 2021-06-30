@@ -1,17 +1,11 @@
 import React, { useState } from "react";
 import Button from "@material-ui/core/Button";
+import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
 import { useHistory } from "react-router-dom";
-import {
-  FormControl,
-  InputLabel,
-  Input,
-  FormLabel,
-  Grid,
-} from "@material-ui/core";
 import { useDispatch } from "react-redux";
 import { login } from "../../redux/actionCreaton.js";
-import { useHistory } from "react-router-dom";
 import axios from "axios";
+import style from "./login.module.css";
 
 const Login = () => {
   const history = useHistory();
@@ -36,68 +30,44 @@ const Login = () => {
   };
 
   return (
-    <Grid
-      container
-      spacing={2}
-      direction="column"
-      alignItems="center"
-      justify="center"
-      style={{ minHeight: "50vh" }}
-    >
-      <Grid item md={12}>
-        <FormControl>
-          <FormLabel></FormLabel>
-          <InputLabel htmlFor="">Email</InputLabel>
-          <Input
-            id="email"
-            required={true}
-            type="email"
-            value={input.email}
-            onChange={(e) => setInput({ ...input, email: e.target.value })}
-          />
-          {/*                     <FormHelperText id='email-helper'>Ingresa tu direccion de email</FormHelperText> */}
-        </FormControl>
-      </Grid>
-      <Grid item md={12}>
-        <FormControl>
-          <InputLabel htmlFor="">Password</InputLabel>
-          <Input
-            id="pwd"
-            type="password"
-            value={input.password}
-            onChange={(e) => setInput({ ...input, password: e.target.value })}
-          />
-          {/*                     <FormHelperText id='password-helper'>Ingresa tu password</FormHelperText> */}
-        </FormControl>
-      </Grid>
-      <Grid item md={12}>
-        <FormControl>
-          <InputLabel htmlFor="">Repite el password</InputLabel>
-          <Input
-            id="pwd"
-            type="password"
-            value={input.password}
-            onChange={(e) => setInput({ ...input, password: e.target.value })}
-          />
-          {/*                     <FormHelperText id='password-helper'>Ingresa tu password</FormHelperText> */}
-        </FormControl>
-      </Grid>
-      <Grid item md={12}>
-        <Button variant="contained" color="primary" onClick={() => getLogin()}>
-          Iniciar sesion
-        </Button>
-      </Grid>
-      <h3>¿Todavia no tienes cuenta?</h3>
-      <Grid item md={12}>
+    <div className={style.container}>
+      <ValidatorForm
+        onError={() => alert("No puede hacer esto")}
+        onSubmit={() => getLogin()}
+      >
+        <TextValidator
+          style={{ margin: "20px" }}
+          label="Email"
+          name="email"
+          value={input.email}
+          onChange={(e) =>
+            setInput({ ...input, [e.target.name]: e.target.value })
+          }
+          validators={["required", "isEmail"]}
+          errorMessages={["Es un valor requerido", "Ingrese un mail valido"]}
+        />
+        <TextValidator
+          style={{ margin: "20px" }}
+          label="Password"
+          name="password"
+          type="password"
+          value={input.password}
+          onChange={(e) =>
+            setInput({ ...input, [e.target.name]: e.target.value })
+          }
+          validators={["required"]}
+          errorMessages={["Es un valor requerido"]}
+        />
         <Button
+          style={{ margin: "20px" }}
+          type="submit"
           variant="contained"
           color="primary"
-          onClick={() => history.push("/register")}
         >
-          Registrate
+          Ingresar
         </Button>
-      </Grid>
-    </Grid>
+      </ValidatorForm>
+    </div>
   );
 };
 
