@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Button from "@material-ui/core/Button";
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
 import { useHistory } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import style from "./profile.module.css";
 
 const Profile = () => {
@@ -11,18 +11,18 @@ const Profile = () => {
   const dispatch = useDispatch();
   //Iniciamos un estado para poder guardar los datos de los inputs y damos estado de inicio con UseState
   const [input, setInput] = useState({
-    name: "",
-    email: "",
+    name: useSelector((state) => state.name),
+    email: useSelector((state) => state.email),
     password: "",
   });
-  const [state, setState] = useState({
-    isLoading: "",
-  });
+
+
+  
   
   const handleProfile = async () => {
     //Axios es el encargado de hacer petición, especificamos la ruta y mandamos los valores del estado
     try {
-      setState({ isLoading: true });
+      
       const response = await axios.post("http://localhost:5000/auth/profile", {
         name: input.name,
         password: input.password,
@@ -32,11 +32,16 @@ const Profile = () => {
       if (response.status !== 200) return alert("Error revise los datos");
     } catch (error) {
       console.log(error);
-    } finally {
-      setState({ isLoading: false });
-    }
+    } 
   };
-  
+  useEffect(() => {
+    ValidatorForm.addValidationRule("isPasswordMatch", (value) => {
+      if (value !== input.password) {
+        return false;
+      }
+      return true;
+    });
+  });
   
 
   return (
@@ -78,6 +83,21 @@ const Profile = () => {
           }
           validators={["required"]}
           errorMessages={["Es un valor requerido"]}
+        />
+        <TextValidator
+          style={{ margin: "20px" }}
+          label="Repetir su Password"
+          name="repeatPassword"
+          type="password"
+          value={input.repeatPassword}
+          onChange={(e) =>
+            setInput({ ...input, [e.target.name]: e.target.value })
+          }
+          validators={["isPasswordMatch", "required"]}
+          errorMessages={[
+            "Las contraseñas no son iguales",
+            "Es un valor requerido",
+          ]}
         />
         <Button
           style={{ margin: "20px" }}
