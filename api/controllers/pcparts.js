@@ -1,7 +1,6 @@
 const gpu = require("../parts/gpu_database.json");
 const amdCpu = require("../parts/amd_cpu_database.json");
 const intelCpu = require("../parts/intel_cpu_database.json");
-const gpu = require("../parts/gpu_database.json");
 const MotherboardIntel = require("../parts/MotherboardIntel.json");
 const MotherboardAmd = require("../parts/MotherboardAmd.json");
 
