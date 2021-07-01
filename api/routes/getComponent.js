@@ -15,8 +15,6 @@ router.get("/amd", getCpuAmd);
 
 router.get("/intel", getCpuIntel);
 
-router.get("/gpu", getGpu);
-
 router.get("/motherboardIntel", getMotherboardIntel);
 
 router.get("/motherboardAmd", getMotherboardAmd);
