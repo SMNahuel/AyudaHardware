@@ -51,7 +51,7 @@ router.post(
     if (!result) {
       return res.status(409).json("Incorrect username or password");
     } else {
-      req.session.userId = user.id;
+      req.session.user = result;
       return res.status(200).json(result);
     }
   }

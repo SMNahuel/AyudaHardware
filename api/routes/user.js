@@ -1,4 +1,5 @@
 var express = require('express');
+const bcrypt = require("bcrypt");
 var router = express.Router();
 /* Function of BD */
 const user = require('../controllers/user.js')
@@ -31,8 +32,16 @@ router.delete('/:id', async (req, res) => {
 });
 
 router.put('/update', async(req,res,next)=>{
+    const response = await hashPassword(req.body.password);
+    req.body.password = response;
     user.updateChanges(req.body.id, req.body)
     .then(r => res.send(r))
     .catch(next)
 })
+
+async function hashPassword(password) {
+  const passwordHash = await bcrypt.hash(password, 10);
+  return passwordHash;
+}
+
 module.exports = router;
