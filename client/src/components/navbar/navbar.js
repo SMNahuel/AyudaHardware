@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
 import AccountCircleIcon from "@material-ui/icons/AccountCircle";
+import HelpIcon from '@material-ui/icons/Help';
 import DesktopMacIcon from "@material-ui/icons/DesktopMac";
 import AccountBoxIcon from "@material-ui/icons/AccountBox";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
@@ -101,6 +102,9 @@ const Navbar = () => {
               </MenuItem>
               <MenuItem onClick={() => history.push("/forum")}>
                 <ForumIcon /> Foro
+              </MenuItem>
+              <MenuItem onClick={() => history.push("/about")}>
+                <HelpIcon /> About
               </MenuItem>
               {email && (
                 <MenuItem onClick={() => dispatch(logout())}>

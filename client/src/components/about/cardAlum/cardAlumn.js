@@ -7,7 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import User from '../../../assets/user_default.png';
+import EmmaProfile from '../../../assets/Emma.profile.jpeg';
 
 const useStyles = makeStyles({
   root: {
@@ -26,7 +26,7 @@ export default function CardAlumn(props) {
           alt="Contemplative Reptile"
           height="200"
           width="200"
-          image={User}
+          image= ""
           title="Alumno image "
         />
         <CardContent>
