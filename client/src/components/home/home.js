@@ -14,7 +14,7 @@ const Home = () => {
            de computadora y compatibilidad.</h2>
             </div>
             <div>
-                <Button variant="contained" color="primary" onClick={() => history.push("/pc")}>
+                <Button variant="contained" color="primary" onClick={() => history.push("/")}>
                   Comienza con el armado
                 </Button>
             </div>

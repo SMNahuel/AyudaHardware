@@ -96,7 +96,7 @@ const Navbar = () => {
               open={open}
               onClose={handleClose}
             >
-              <MenuItem onClick={() => history.push("/pc")}>
+              <MenuItem onClick={() => history.push("/")}>
                 <DesktopMacIcon /> Armar PC
               </MenuItem>
               <MenuItem onClick={() => history.push("/forum")}>

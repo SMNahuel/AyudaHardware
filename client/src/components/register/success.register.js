@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import style from './register.module.css';
 
 const SuccessRegister = () => {
   const history = useHistory();
@@ -9,7 +10,7 @@ const SuccessRegister = () => {
     }, 3000);
   });
   return (
-    <div>
+    <div className={style.container}>
       <h1>Registro exitoso</h1>
     </div>
   );
