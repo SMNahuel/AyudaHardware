@@ -103,6 +103,11 @@ const Navbar = () => {
                 <ForumIcon /> Foro
               </MenuItem>
               {email && (
+                <MenuItem onClick={() => history.push("/profile")}>
+                  <AccountCircleIcon /> Profile
+                </MenuItem>
+              )}
+              {email && (
                 <MenuItem onClick={() => dispatch(logout())}>
                   <ExitToAppIcon /> Logout
                 </MenuItem>

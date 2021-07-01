@@ -9,7 +9,7 @@ const {
 } = require("../controllers/pcparts.js");
 const router = express.Router();
 
-router.get("/gpu", getGpu);
+
 
 router.get("/amd", getCpuAmd);
 
