@@ -4,6 +4,7 @@ import Button from "@material-ui/core/Button";
 import { ValidatorForm, TextValidator } from "react-material-ui-form-validator";
 import { useHistory } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { login } from "../../redux/actionCreaton.js";
 import style from "./profile.module.css";
 
 const Profile = () => {
@@ -11,6 +12,7 @@ const Profile = () => {
   const dispatch = useDispatch();
   //Iniciamos un estado para poder guardar los datos de los inputs y damos estado de inicio con UseState
   const [input, setInput] = useState({
+    id: useSelector((state) => state.id),
     name: useSelector((state) => state.name),
     email: useSelector((state) => state.email),
     password: "",
@@ -23,12 +25,17 @@ const Profile = () => {
     //Axios es el encargado de hacer petición, especificamos la ruta y mandamos los valores del estado
     try {
       
-      const response = await axios.post("http://localhost:5000/auth/profile", {
+      const response = await axios.put("http://localhost:5000/user/update", {
+        id: input.id,
         name: input.name,
         password: input.password,
         email: input.email,
       });
-      if (response.status === 200) history.push("/success_register");
+      if (response.status === 200) {
+        dispatch(login(input));
+        history.push("/")
+        return alert("Cambios guardados")
+      };
       if (response.status !== 200) return alert("Error revise los datos");
     } catch (error) {
       console.log(error);
@@ -81,7 +88,6 @@ const Profile = () => {
           onChange={(e) =>
             setInput({ ...input, [e.target.name]: e.target.value })
           }
-          validators={["required"]}
           errorMessages={["Es un valor requerido"]}
         />
         <TextValidator
@@ -93,7 +99,6 @@ const Profile = () => {
           onChange={(e) =>
             setInput({ ...input, [e.target.name]: e.target.value })
           }
-          validators={["isPasswordMatch", "required"]}
           errorMessages={[
             "Las contraseñas no son iguales",
             "Es un valor requerido",
