@@ -18,7 +18,7 @@ function App() {
           <NavBar />
           <About />
         </Route>
-        <Route path="/pc">
+        <Route path="/armar_pc">
           <NavBar />
           <Pcparts />
         </Route>

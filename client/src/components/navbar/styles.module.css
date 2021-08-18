@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Righteous&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap");
+
+.Container {
+  margin-top: -1em;
+  display: flex;
+  align-items: center;
+  background-color: #334756;
+}
+
+.Navbar {
+  display: flex;
+  padding-left: 2.5em;
+}
+
+.NameWeb {
+  padding-right: 10em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ff4c29;
+}
+.Option {
+  height: 50%;
+  border-left: solid #2c394b 2px;
+  color: #ffffff;
+  font-weight: 500;
+  padding-left: 6em;
+  padding-right: 6em;
+  background: rgba(0, 0, 0, 0);
+  border-color: #2c394b;
+  transition: all 1s ease;
+}
+.Option:hover {
+  background: #318aac;
+  color: #fff !important;
+}
