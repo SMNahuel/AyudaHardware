@@ -1,5 +1,5 @@
 {
-    "INTEL Socket": [{
+    "motherboard": [{
             "name": "Asrock Z390 Steel Legend",
             "Socket(s)": "1x LGA 1151",
             "Form Factor": "ATX",

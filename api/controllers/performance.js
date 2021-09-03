@@ -1,64 +1,69 @@
 exports.performance = (req, res) => {
+  console.log(req.body);
+  const { arquitectura, software } = req.body;
+  let perfomanceCpu =
+    arquitectura.type === "intel"
+      ? this.perfomanceIntel(arquitectura, software)
+      : this.perfomanceAmd(arquitectura, software);
+  let perfomanceGpu = this.perfomanceGpu(arquitectura, software);
+  console.log(perfomanceGpu);
+  res.status(200).send(perfomanceCpu);
+};
 
-    const {arquitectura, software } = req.body;
-    let perfomanceCpu = arquitectura.cpu_intel ? this.perfomanceIntel(arquitectura, software) : this.performanceAmd(arquitectura, software)
-    let perfomanceGpu = this.perfomanceGpu(arquitectura, software)
-    console.log(perfomanceGpu)
-    res.status(200).send(perfomanceCpu)
-}
+exports.perfomanceIntel = (arquitectura, software) => {
+  const { Cores, Clock } = arquitectura.cpu;
+  let min = this.parseToInt(Clock) > this.parseToInt(software.min.intel);
+  let med = this.parseToInt(Clock) > this.parseToInt(software.med.intel);
+  if (min === true && med === true) {
+    return "Very good";
+  }
+  if (min === true) {
+    return "Good";
+  }
+  return "Bad";
+};
 
-exports.perfomanceIntel = (arquitectura, software) =>{
-    const { Cores, Clock } = arquitectura.cpu_intel;
-    let min = this.parseToInt(Clock) > this.parseToInt(software.min.intel) 
-    let med = this.parseToInt(Clock) > this.parseToInt(software.med.intel)
-    if(min === true && med === true){
-        return 'Very good'
+exports.parseToInt = (string) => {
+  const tmp = string.split("");
+  let map = tmp.map(function (str) {
+    if (!isNaN(parseInt(str))) {
+      return str;
     }
-    if(min === true){
-        return 'Good'
-    }
-    return 'Bad'
-}
+  });
+  let numbers = map.filter(function (value) {
+    return value != undefined;
+  });
+  let coreParse;
+  if (numbers.length > 2) {
+    coreParse = numbers[0] + "." + numbers[1];
+  } else {
+    coreParse = numbers[0];
+  }
+  console.log(coreParse);
+  return coreParse;
+};
 
-exports.parseToInt = (string) =>{
-    const tmp = string.split("");
-    let map = tmp.map(function(str){
-        if(!isNaN(parseInt(str))) {
-            return str
-          }
-    });
-    let numbers = map.filter(function(value) {
-        return value != undefined;
-    });
-    let coreParse
-    if(numbers.length > 2){
-        coreParse = numbers[0] +"."+ numbers[1]
-    }else{
-        coreParse = numbers[0]
-    }
-    console.log(coreParse)
-    return coreParse
-}
+exports.perfomanceAmd = (arquitectura, software) => {
+  const { Clock } = arquitectura.cpu;
+  let min = this.parseToInt(Clock) > this.parseToInt(software.min.amd);
+  let med = this.parseToInt(Clock) > this.parseToInt(software.med.amd);
+  if (min === true && med === true) {
+    return "Very good";
+  }
+  if (min === true) {
+    return "Good";
+  }
+  return "Bad";
+};
 
-exports.perfomanceAmd = (arquitectura, software) =>{
-    console.log("Cpu intel")
-    const { Clock } = arquitectura.cpu_amd;
-    let min = this.parseToInt(Clock) > this.parseToInt(software.min.amd) 
-    let med = this.parseToInt(Clock) > this.parseToInt(software.med.amd)
-    if(min === true && med === true){
-        return 'Very good'
-    }
-    if(min === true){
-        return 'Good'
-    }
-    return 'Bad'
-}
-
-exports.perfomanceGpu = (arquitectura, software) =>{
-    const { Memory } = arquitectura.gpu;
-    console.log("Gpu")
-    console.log("Perfonmance",this.parseToInt(Memory) > this.parseToInt(software.min.gpu))
-}
+exports.perfomanceGpu = (arquitectura, software) => {
+  const { Memory } = arquitectura.gpu;
+  console.log("Gpu");
+  console.log(
+    "Perfonmance",
+    this.parseToInt(Memory) > this.parseToInt(software.min.gpu)
+  );
+};
 
 /*
     "cpu": 
