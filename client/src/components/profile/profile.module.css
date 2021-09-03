@@ -85,3 +85,21 @@
   width: 30px;
   height: 30px;
 }
+.Title {
+  font-family: "Righteous", cursive;
+  color: white;
+}
+.PCs {
+  width: 105px;
+  height: 100px;
+  border-radius: 30px;
+  background-color: #ff4c29;
+}
+.ContainerPC {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  padding-left: 20em;
+  padding-right: 20em;
+}

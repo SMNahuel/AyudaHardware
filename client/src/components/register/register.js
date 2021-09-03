@@ -17,7 +17,7 @@ const Register = () => {
     name: yup
       .string()
       .required()
-      .matches(/^[a-z]+$/, "Is not in correct format"),
+      .matches(/^[a-z ,.'-]+$/i, "Is not in correct format"),
     email: yup.string().email().required(),
     password: yup.string().min(6).max(15).required(),
     confirmPassword: yup

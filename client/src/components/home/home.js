@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "../navbar/navbar";
 import style from "./home.module.css";
 
 const noticiesHard = [
@@ -39,6 +40,7 @@ const noticiesHard = [
 const Home = () => {
   return (
     <div className={style.Container}>
+      <Navbar />
       <div className={style.About}></div>
       <div className={style.Noticies}>
         {noticiesHard.map((noticie) => {

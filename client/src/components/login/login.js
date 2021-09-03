@@ -40,6 +40,7 @@ const Login = () => {
   };
 
   const successLogin = (data) => {
+    console.log(data);
     dispatch(login(data));
     history.push("/");
   };

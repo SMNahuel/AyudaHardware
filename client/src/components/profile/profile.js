@@ -61,7 +61,20 @@ const Profile = () => {
           </div>
         </div>
       </div>
-      <div className={style.PC}></div>
+      <div className={style.PC}>
+        <h4 className={style.Title}>PC ARMADAS</h4>
+        <div className={style.ContainerPC}>
+          <div className={style.PCs}>
+            <p>PC 1</p>
+          </div>
+          <div className={style.PCs}>
+            <p>PC 2</p>
+          </div>
+          <div className={style.PCs}>
+            <p>PC 3</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

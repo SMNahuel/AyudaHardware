@@ -12,24 +12,24 @@ const Navbar = () => {
             </a>
           </h4>
         </div>
-        <div>
+        <div className={style.Option}>
           <a href="/armar_pc" style={{ textDecoration: "none" }}>
-            <h4 className={style.Option}>Armar PC</h4>
+            <h4 className={style.HREF}>Armar PC</h4>
           </a>
         </div>
-        <div>
-          <a href="" style={{ textDecoration: "none" }}>
-            <h4 className={style.Option}>Noticias</h4>
+        <div className={style.Option}>
+          <a href="/noticias" style={{ textDecoration: "none" }}>
+            <h4 className={style.HREF}>Noticias</h4>
           </a>
         </div>
-        <div>
-          <a href="" style={{ textDecoration: "none" }}>
-            <h4 className={style.Option}>PC Armadas</h4>
+        <div className={style.Option}>
+          <a href="/pc_armadas" style={{ textDecoration: "none" }}>
+            <h4 className={style.HREF}>PC Armadas</h4>
           </a>
         </div>
-        <div>
+        <div className={style.Option}>
           <a href="/login" style={{ textDecoration: "none" }}>
-            <h4 className={style.Option}>Ingresar</h4>
+            <h4 className={style.HREF}>Ingresar</h4>
           </a>
         </div>
       </div>

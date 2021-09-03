@@ -3,6 +3,7 @@ const amdCpu = require("../parts/amd_cpu_database.json");
 const intelCpu = require("../parts/intel_cpu_database.json");
 const MotherboardAmd = require("../parts/MotherboardAmd.json");
 const MotherboardIntel = require("../parts/MotherboardIntel.json");
+const Software = require("../parts/software.json");
 
 exports.getCpu = (req, res) => {
   res.status(200).send(amdCpu + intelCpu);
@@ -23,10 +24,15 @@ exports.getGpu = (req, res) => {
 exports.getMotherboard = (req, res) => {
   res.status(200).send(MotherboardIntel + MotherboardAmd);
 };
+
 exports.getMotherboardIntel = async (req, res) => {
   res.status(200).send(MotherboardIntel);
 };
 
 exports.getMotherboardAmd = async (req, res) => {
   res.status(200).send(MotherboardAmd);
+};
+
+exports.getSoftware = async (req, res) => {
+  res.status(200).send(Software);
 };

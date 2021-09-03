@@ -5,6 +5,7 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
+  justify-content: center;
   background-color: #082032;
   height: 100vh;
   padding-left: 20em;
@@ -77,4 +78,11 @@
   width: 30px;
   height: 30px;
   margin-right: 1em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
