@@ -75,6 +75,7 @@
   border: none;
   width: 100%;
   background-color: #334756;
+  margin-left: 1em;
 }
 .Inputs:focus {
   outline: none;

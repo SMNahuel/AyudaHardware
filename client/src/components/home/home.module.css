@@ -14,7 +14,16 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  -webkit-transition: all 1s 0s ease;
+  -moz-transition: all 1s 0s ease;
+  -o-transition: all 1s 0s ease;
+  transition: all 1s 0s ease;
 }
+
+.Noticies:hover {
+  background: #2c394b;
+}
+
 .About {
   width: 100%;
   height: 50%;
@@ -28,4 +37,12 @@
   height: 15em;
   background-color: #ff4c29;
   border-radius: 50px;
+  -webkit-transition: all 1s 0s ease;
+  -moz-transition: all 1s 0s ease;
+  -o-transition: all 1s 0s ease;
+  transition: all 1s 0s ease;
+}
+
+.Noticie:hover {
+  background: #bb4229d5;
 }

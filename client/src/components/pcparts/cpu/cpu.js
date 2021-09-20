@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Button from "@material-ui/core/Button";
 import style from "./cpu.module.css";
 import axios from "axios";
 import CardComponent from "./cardComponent/cardComponent";

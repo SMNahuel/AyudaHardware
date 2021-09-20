@@ -5,3 +5,11 @@ export const login = (user) => {
 export const logout = () => {
   return { type: "logout" };
 };
+
+export const pcArmadas = () => {
+  return { type: "pc_armadas"}
+}
+
+export const noticias =  () => {
+  return { type: "noticies"}
+}

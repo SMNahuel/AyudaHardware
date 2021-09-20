@@ -44,19 +44,39 @@ const Profile = () => {
           <div className={style.BackgroundPhoto}>
             <img src={UserPhoto} alt="ProfileUser" />
           </div>
-          <button className={style.Button}> EDITAR INFO</button>
+          <button className={style.Button} onClick={() => handleProfile()}>
+            EDITAR INFO
+          </button>
         </div>
         <div className={style.Right}>
           <div className={style.ContainerInputs}>
-            <input className={style.Inputs} type="text" />
+            <input
+              className={style.Inputs}
+              type="text"
+              value={input.email}
+              onChange={(e) =>
+                setInput({
+                  ...input,
+                  email: e.target.value,
+                })
+              }
+            />
             <img src={Pen} alt="Edit" className={style.Pencil} />
           </div>
           <div className={style.ContainerInputs}>
-            <input className={style.Inputs} type="text" />
+            <input
+              className={style.Inputs}
+              type="password"
+              value={input.password}
+            />
             <img src={Pen} alt="Edit" className={style.Pencil} />
           </div>
           <div className={style.ContainerInputs}>
-            <input className={style.Inputs} type="text" />
+            <input
+              className={style.Inputs}
+              type="password"
+              value={input.password}
+            />
             <img src={Pen} alt="Edit" className={style.Pencil} />
           </div>
         </div>
