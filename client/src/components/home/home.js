@@ -42,7 +42,7 @@ const Home = () => {
     axios.get("http://localhost:5000/post").then(({ data }) =>
       setState({
         ...state,
-        post: data,
+        post: data.post,
       })
     );
   }, []);
@@ -72,7 +72,6 @@ const Home = () => {
         })}
       </div>
     </div>
-    
   );
 };
 
