@@ -50,7 +50,9 @@ const Home = () => {
   return (
     <div className={style.Container}>
       <Navbar />
-      <div className={style.About}></div>
+      <div className={style.About}>
+        {/* <img src="https://www.logg.com.ar/static/NewPublic/home/armatupc.png"></img> */}
+      </div>
       <div className={style.Noticies}>
         {state.post.map((item, index) => {
           return (
@@ -70,6 +72,7 @@ const Home = () => {
         })}
       </div>
     </div>
+    
   );
 };
 
