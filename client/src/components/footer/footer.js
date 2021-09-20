@@ -1,6 +1,5 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import style from './footer.module.css'
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import MenuItem from "@material-ui/core/MenuItem";
@@ -20,17 +19,15 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
   },
   appBar: {
-    backgroundColor: '#010102',
+    backgroundColor: "#010102",
     marginTop: 50,
     top: "auto",
     bottom: 0,
     paddingTop: 40,
-       
   },
   toolbar: {
     display: "flex",
     marginBottom: "2rem",
-    
   },
   grow: {
     flexGrow: 1,
@@ -49,18 +46,13 @@ const Footer = () => {
   const classes = useStyles();
   var history = useHistory();
   return (
-    <AppBar  position="fixed" color="primary" className={classes.appBar}>
-      <Toolbar  className={classes.toolbar}>
-        <MenuItem   onClick={() => history.push("/about")}>
-          Sobre Nosotros      
+    <AppBar position="fixed" color="primary" className={classes.appBar}>
+      <Toolbar className={classes.toolbar}>
+        <MenuItem onClick={() => history.push("/about")}>
+          Sobre Nosotros
         </MenuItem>
-        <MenuItem  onClick={() => history.push("/pc")}>
-          Armar Pc   
-        </MenuItem>
-        <MenuItem onClick={() => history.push("/foroum")}>
-          Foro   
-        </MenuItem>
-        
+        <MenuItem onClick={() => history.push("/pc")}>Armar Pc</MenuItem>
+        <MenuItem onClick={() => history.push("/foroum")}>Foro</MenuItem>
       </Toolbar>
     </AppBar>
   );

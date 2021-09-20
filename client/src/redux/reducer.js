@@ -1,18 +1,21 @@
 const initializeState = {
-  name: "",
-  email: "",
-  id: ""
+  name: null,
+  email: null,
+  id: null,
+  pc_armadas: null,
+  photo_url: null,
 };
 
 function reducer(state = initializeState, action) {
-  console.log(action.payload)
   switch (action.type) {
     case "login":
       return {
         ...state,
         name: action.payload.name,
         email: action.payload.email,
-        id: action.payload.id
+        id: action.payload.id,
+        pc_armadas: action.payload.pc_armadas,
+        photo_url: action.payload.photo_url,
       };
     case "logout":
       return initializeState;

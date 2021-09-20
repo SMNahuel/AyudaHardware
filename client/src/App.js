@@ -3,7 +3,6 @@ import SuccessRegister from "./components/register/success.register.js";
 import PcArmadas from "./components/pcarmadas/pcarmadas.js";
 import Register from "./components/register/register.js";
 import Pcparts from "./components/pcparts/pcparts.js";
-import Footer from "./components/footer/footer.js";
 import Profile from "./components/profile/profile";
 import NavBar from "./components/navbar/navbar.js";
 import About from "./components/about/about.js";
