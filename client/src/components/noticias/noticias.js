@@ -26,11 +26,11 @@ const Noticias = (post) => {
   return (
     <div className={style.Container}>
       <div className={style.Notice}>
-        <div className={style.Title}>{state.post[0].post_title}</div>
+        <div className={style.Title}>{state.post.post_title}</div>
         <div className={style.ContainerPhoto}>
           <img src={post.Img} className={style.PhotoNotice} />
         </div>
-        <div className={style.Content}>{state.post[0].post_text}</div>
+        <div className={style.Content}>{state.post.post_text}</div>
       </div>
       <div className={style.Author}>
         <div className={style.PhotoAutor}></div>
