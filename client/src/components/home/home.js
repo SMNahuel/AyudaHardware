@@ -33,7 +33,7 @@ const noticiesHard = [
 
 const Home = () => {
   const [state, setState] = useState({
-    post: [""],
+    post: null,
   });
 
   const history = useHistory();
@@ -42,7 +42,7 @@ const Home = () => {
     axios.get("http://localhost:5000/post").then(({ data }) =>
       setState({
         ...state,
-        post: data.post,
+        post: data,
       })
     );
   }, []);
@@ -54,15 +54,16 @@ const Home = () => {
         {/* <img src="https://www.logg.com.ar/static/NewPublic/home/armatupc.png"></img> */}
       </div>
       <div className={style.Noticies}>
-        {state.post.map((item, index) => {
-          return (
-            <div className={style.Noticie} key={index}>
-              <h4 onClick={() => history.push(`/noticias/${item.id}`)}>
-                {item.post_title}
-              </h4>
-            </div>
-          );
-        })}
+        {state.post &&
+          state.post.map((item, index) => {
+            return (
+              <div className={style.Noticie} key={index}>
+                <h4 onClick={() => history.push(`/noticias/${item.id}`)}>
+                  {item.post_title}
+                </h4>
+              </div>
+            );
+          })}
         {noticiesHard.map((noticie, index) => {
           return (
             <div className={style.Noticie} key={index}>
