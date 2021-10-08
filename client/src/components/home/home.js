@@ -16,13 +16,17 @@ const Home = () => {
 
   useEffect(() => {
     axios.get("http://localhost:5000/post").then(({ data }) => {
-      setState({
-        ...state,
-        post: data,
-      }),
-        dispatch(noticies(data));
+      succesFetch(data);
     });
   }, []);
+
+  const succesFetch = (data) => {
+    dispatch(noticies(data));
+    setState({
+      ...state,
+      post: data,
+    });
+  };
 
   return (
     <div className={style.Container}>

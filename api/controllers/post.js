@@ -19,7 +19,14 @@ module.exports = {
   },
   read: function () {
     return Post.findAll({
-      attributes: ["post_title", "post_text", "status", "userId", "id"],
+      attributes: [
+        "post_title",
+        "post_text",
+        "status",
+        "userId",
+        "id",
+        "createdAt",
+      ],
     });
   },
   create: function ({ post_title, post_text, status, userId }) {

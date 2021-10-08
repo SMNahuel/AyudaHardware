@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from "react";
+import { connect } from "react-redux";
 import axios from "axios";
 import style from "./noticias.module.css";
 
-const Noticias = (post) => {
+const mapStateToProps = (state) => {
+  return { store: state };
+};
+
+const Noticias = ({ store }) => {
+  console.log(store);
   const [state, setState] = useState({
     post: [""],
     author: "",
@@ -14,21 +20,32 @@ const Noticias = (post) => {
 
   const fetchData = async () => {
     const id = window.location.href.split("/").pop();
+    if (Number(id)) {
+      const post = await axios
+        .get(`http://localhost:5000/post/${id}`)
+        .then(({ data }) => {
+          return data;
+        });
+      setState(post);
+    } else {
+      selectLast();
+    }
+  };
+
+  const selectLast = async () => {
+    const id = store.noticies[0].id;
     const post = await axios
       .get(`http://localhost:5000/post/${id}`)
       .then(({ data }) => {
         return data;
       });
-    console.log(post);
     setState(post);
   };
-
   return (
     <div className={style.Container}>
       <div className={style.Notice}>
         <div className={style.ContainerPhoto}>
           <div className={style.Title}>{state.post.post_title}</div>
-          <img src={post.Img} className={style.PhotoNotice} />
         </div>
         <div className={style.Content}>{state.post.post_text}</div>
       </div>
@@ -45,4 +62,4 @@ const Noticias = (post) => {
   );
 };
 
-export default Noticias;
+export default connect(mapStateToProps, null)(Noticias);
