@@ -4,6 +4,8 @@ const initializeState = {
   id: null,
   pc_armadas: null,
   photo_url: null,
+  pc_select: null,
+  noticies: null,
 };
 
 function reducer(state = initializeState, action) {
@@ -19,6 +21,17 @@ function reducer(state = initializeState, action) {
       };
     case "logout":
       return initializeState;
+    case "pc":
+      return {
+        ...state,
+        pc_select: action.payload.arquitectura,
+      };
+    case "noticies":
+      console.log(action.payload);
+      return {
+        ...state,
+        noticies: action.payload.noticies,
+      };
     default:
       return { ...state };
   }

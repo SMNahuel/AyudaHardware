@@ -50,6 +50,7 @@
   display: flex;
   justify-content: center;
   margin: 3em;
+  padding: 0em 0em 0em 3em;
 }
 .Content {
   padding-left: 4em;

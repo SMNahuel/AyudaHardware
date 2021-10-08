@@ -15,7 +15,9 @@ const Login = () => {
   const [state, setState] = useState({
     password: true,
   });
+  /* Iniciamos history para poder redireccionar */
   const history = useHistory();
+  /* Iniciamos dispatch para actualizar el store de redux */
   const dispatch = useDispatch();
   //Iniciamos un estado para poder guardar los datos de los inputs y damos estado de inicio con UseState
   const schema = yup.object().shape({
@@ -40,7 +42,6 @@ const Login = () => {
   };
 
   const successLogin = (data) => {
-    console.log(data);
     dispatch(login(data));
     history.push("/");
   };

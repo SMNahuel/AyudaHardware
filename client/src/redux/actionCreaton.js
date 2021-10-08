@@ -7,9 +7,13 @@ export const logout = () => {
 };
 
 export const pcArmadas = () => {
-  return { type: "pc_armadas"}
-}
+  return { type: "pc_armadas" };
+};
 
-export const noticias =  () => {
-  return { type: "noticies"}
-}
+export const noticies = (noticies) => {
+  return { type: "noticies", payload: noticies };
+};
+
+export const PC = (pc) => {
+  return { type: "pc", payload: pc };
+};
