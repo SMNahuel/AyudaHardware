@@ -19,15 +19,15 @@ const Noticias = (post) => {
       .then(({ data }) => {
         return data;
       });
-
+    console.log(post);
     setState(post);
   };
 
   return (
     <div className={style.Container}>
       <div className={style.Notice}>
-        <div className={style.Title}>{state.post.post_title}</div>
         <div className={style.ContainerPhoto}>
+          <div className={style.Title}>{state.post.post_title}</div>
           <img src={post.Img} className={style.PhotoNotice} />
         </div>
         <div className={style.Content}>{state.post.post_text}</div>

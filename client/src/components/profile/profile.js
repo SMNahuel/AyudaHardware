@@ -68,6 +68,7 @@ const Profile = () => {
               className={style.Inputs}
               type="password"
               value={input.password}
+              placeholder="Ingrese nuevo password"
             />
             <img src={Pen} alt="Edit" className={style.Pencil} />
           </div>
@@ -76,6 +77,7 @@ const Profile = () => {
               className={style.Inputs}
               type="password"
               value={input.password}
+              placeholder="Repita nuevo password"
             />
             <img src={Pen} alt="Edit" className={style.Pencil} />
           </div>
