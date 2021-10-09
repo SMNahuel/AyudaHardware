@@ -27,10 +27,9 @@ function reducer(state = initializeState, action) {
         pc_select: action.payload.arquitectura,
       };
     case "noticies":
-      console.log(action.payload);
       return {
         ...state,
-        noticies: action.payload.noticies,
+        noticies: action.payload,
       };
     default:
       return { ...state };
