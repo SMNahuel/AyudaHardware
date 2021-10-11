@@ -51,7 +51,7 @@ const Noticias = ({ store }) => {
       </div>
       <div className={style.Author}>
         <div className={style.PhotoAutor}></div>
-        <h4 className={style.About}>{state.author.name}</h4>
+        {/* <h4 className={style.About}>{state.author.name}</h4> */}
         <h4 className={style.About}>Acerca de: </h4>
         <div className={style.AboutAuthor}>
           Lorem Ipsum is simply dummy text of the printing and typesetting
