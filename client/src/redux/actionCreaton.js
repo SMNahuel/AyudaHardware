@@ -6,12 +6,12 @@ export const logout = () => {
   return { type: "logout" };
 };
 
-export const pcArmadas = () => {
-  return { type: "pc_armadas" };
-};
-
 export const noticies = (noticies) => {
   return { type: "noticies", payload: noticies };
+};
+
+export const pcArmadas = () => {
+  return { type: "pc_armadas" };
 };
 
 export const PC = (pc) => {
