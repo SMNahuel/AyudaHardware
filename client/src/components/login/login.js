@@ -12,6 +12,7 @@ import { ErrorMessage } from "@hookform/error-message";
 import ShowPassword from "../../assets/remove_red_eye.png";
 
 const Login = () => {
+  /* Controlar si se muestra o no la password */
   const [state, setState] = useState({
     password: true,
   });
@@ -42,12 +43,16 @@ const Login = () => {
   };
 
   const successLogin = (data) => {
+    /* Despachamos a la store los datos */
     dispatch(login(data));
+    /* Volvemos al home */
     history.push("/");
   };
+
   const submitForm = (data) => {
     getLogin(data);
   };
+  
   return (
     <div className={style.Container}>
       <div className={style.UserPhoto}>

@@ -7,11 +7,14 @@ import Navbar from "../navbar/navbar";
 import style from "./pcarmadas.module.css";
 
 const PcArmadas = () => {
+
   const [state, setState] = useState({
     PCS: null,
   });
+
   const history = useHistory();
   const dispatch = useDispatch();
+
   useEffect(() => {
     axios.get("http://localhost:5000/part/pc_armadas").then(({ data }) =>
       setState({
@@ -25,6 +28,7 @@ const PcArmadas = () => {
     dispatch(PC(item));
     history.push(`/armar_pc`);
   };
+  
   return (
     <>
       <Navbar />
