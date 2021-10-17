@@ -40,13 +40,19 @@ const Profile = () => {
     }
   };
 
+  /* Subida de foto*/
   const fileChange = async () => {
+    /*Capturamos el archivo */
     var file = document.getElementById("input_img");
 
+    /*Guardamos los datos */
     let body = new FormData();
+    /*Guardamos la Api Key */
     body.set("key", "3b8489ea2bc0ad9ee80ec4ca5a1dfb27");
+    /*Guardamos la Api Key */
     body.append("image", file.files[0]);
 
+    /*Guardamos la respuesta de la API Rest */
     const url = await axios({
       method: "post",
       url: "https://api.imgbb.com/1/upload",
