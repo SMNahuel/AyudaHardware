@@ -1,53 +1,58 @@
-var express = require('express');
-const bcrypt = require("bcrypt");
+var express = require("express");
 var router = express.Router();
+const bcrypt = require("bcrypt");
 /* Function of BD */
-const user = require('../controllers/user.js')
+const user = require("../controllers/user.js");
 
-router.get('/', async (req, res, next) => {
+router.get("/", async (req, res, next) => {
   const userList = await user.read();
   return res.status(200).json(userList);
 });
 
-router.delete('/:id', async (req, res) => {
+router.delete("/:id", async (req, res) => {
   let { id } = req.params;
 
   try {
     let checkUser = await user.getUserById(id);
 
     if (checkUser) {
-
-      if (checkUser.dataValues.deletedAt != null) return res.status(400).json({ error: `User with id: ${id} doesn't exists` });
+      if (checkUser.dataValues.deletedAt != null)
+        return res
+          .status(400)
+          .json({ error: `User with id: ${id} doesn't exists` });
 
       await user.deleteUser(id);
 
-      return res.status(200).json({ message: `User with id: ${id} deleted successfully` });
+      return res
+        .status(200)
+        .json({ message: `User with id: ${id} deleted successfully` });
     }
 
-    return res.status(400).json({ error: `User with id: ${id} doesn't exists` });
+    return res
+      .status(400)
+      .json({ error: `User with id: ${id} doesn't exists` });
   } catch (err) {
     res.status(400).json({ error: err });
   }
-
 });
 
-router.put('/update', async(req,res,next)=>{
-  console.log(req.body)
-    if(req.body.password){
-      const response = await hashPassword(req.body.password);
-      req.body.password = response;
-      user.updateChanges(req.body.id, req.body)
-      .then(r => res.send(r))
-      .catch(next)
-    }else{
-      const {email, photoUrl, name} = req.body
-      const data = {email : email, photoUrl:photoUrl, name:name} 
-      user.updateChanges(req.body.id, data)
-      .then(r => res.send(r))
-      .catch(next)
-    }
-
-})
+router.put("/update", async (req, res, next) => {
+  if (req.body.password) {
+    const response = await hashPassword(req.body.password);
+    req.body.password = response;
+    user
+      .updateChanges(req.body.id, req.body)
+      .then((r) => res.send(r))
+      .catch(next);
+  } else {
+    const { email, photoUrl, name } = req.body;
+    const data = { email: email, photoUrl: photoUrl, name: name };
+    user
+      .updateChanges(req.body.id, data)
+      .then((r) => res.send(r))
+      .catch(next);
+  }
+});
 
 async function hashPassword(password) {
   const passwordHash = await bcrypt.hash(password, 10);

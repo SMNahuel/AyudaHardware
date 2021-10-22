@@ -51,14 +51,10 @@ router.post(
     if (!result) {
       return res.status(409).json("Incorrect username or password");
     } else {
-      req.session.user = result;
       return res.status(200).json(result);
     }
   }
 );
-router.delete("/logout", async (req, res) => {
-  req.session = null;
-});
 
 async function loginUser(email, password) {
   try {
@@ -96,5 +92,9 @@ function validate(errors, res) {
     return res.status(400).json({ errors: errors.array() });
   }
 }
+
+//router.delete("/logout", async (req, res) => {
+//  req.session = null;
+//});
 
 module.exports = router;

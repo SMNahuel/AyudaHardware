@@ -6,9 +6,6 @@ const MotherboardIntel = require("../parts/MotherboardIntel.json");
 const Software = require("../parts/software.json");
 const PcArmadas = require("../parts/PC_Armadas.json");
 
-exports.getCpu = (req, res) => {
-  res.status(200).send(amdCpu + intelCpu);
-};
 
 exports.getCpuAmd = async (req, res) => {
   res.status(200).send(amdCpu);
