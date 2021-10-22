@@ -9,7 +9,7 @@ const Software = ({ setearSoftware }) => {
     await axios
       .get("http://localhost:5000/part/software")
       .then(({ data }) => setState(data));
-  });
+  },[]);
 
   return (
     <>
